@@ -1,0 +1,138 @@
+@media (min-width: 1600px) and (max-width: 1920px) {
+
+
+  .header {
+    height: 100px;
+  }
+
+  .main_banner__img {
+    height: 800px;
+    right: -200px;
+    left: auto;
+  }
+
+
+  .about_learning__card p {
+    width: 50%;
+  }
+}
+
+
+
+
+@media (min-width: 960px) and (max-width: 1440px) {
+
+  * {font-size: 16px;}
+
+  h1 {font-size: 60px;}
+  h2 {font-size: 36px;}
+  h3 {font-size: 24px;}
+  h4 {font-size: 20px;}
+  h5 {font-size: 18px;}
+
+  .blue_button {
+    padding: 16px 50px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .header__logo {
+    height: 42px;
+  }
+
+  .header__nav a {
+    margin-right: 30px;
+  }
+
+  .header__nav a:nth-child(4) {
+    margin-right: 0;
+  }
+
+  .main_banner__img {
+    height: 500px;
+    right: -100px;
+    left: auto;
+  }
+
+
+  .about_learning__card p {
+    width: 80%;
+  }
+
+  .about_learning__card__title{
+    height: 250px;
+  }
+
+
+  .our_pluses__content__item {
+    padding: 40px 10vw;
+  }
+
+  .our_pluses__content__title  {
+    font-size: 30px;
+  }
+
+
+  .process_steps__title {
+    padding: 60px 10vw 20px;
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 960px) {
+
+
+  * {font-size: 16px;}
+
+  h1 {font-size: 60px;}
+  h2 {font-size: 36px;}
+  h3 {font-size: 24px;}
+  h4 {font-size: 20px;}
+  h5 {font-size: 18px;}
+
+  a {display: none;}
+
+
+  .main_banner__img {
+    height: 500px;
+    right: -100px;
+    left: auto;
+    bottom: 200px;
+  }
+
+  .main_banner__title {
+    padding-bottom: 300px;
+  }
+
+  .about_learning__card{grid-column: 1/3}
+
+  .our_pluses__title h1 {
+    width: 70vw;
+  }
+
+
+  .our_pluses__content__title  {
+    font-size: 30px;
+  }
+
+
+
+
+
+
+
+}
