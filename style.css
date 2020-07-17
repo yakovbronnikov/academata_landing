@@ -16,6 +16,27 @@ body {
 }
 
 
+.cursor {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: .1s;
+  transform: translate(-48%, -45%);
+  pointer-events: none;
+  transform-origin: 150% 150%;
+}
+
+.cursor_learn {
+  background: rgba(0,0,0,0);
+  transform: scale(1.5);
+  backdrop-filter: invert(100%);
+}
+
 
 .blue_button {
   font-weight: 500;
@@ -107,16 +128,15 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0 10vw;
-  /* background: url(img/main_banner_img.png) no-repeat 65%, linear-gradient(284.41deg, #0062BD 0%, #001E39 100%); */
-  background: linear-gradient(284.41deg, #0062BD 0%, #001E39 100%);
+  background: linear-gradient(284.41deg, #147FFF 0%, #003C83 100%);
   color: #fff;
 }
 
 .main_banner__img {
   position: absolute;
-  height: 600px;
+  height: 500px;
   bottom: 100px;
-  left: -7vw;
+  right: 0;
   opacity: 0;
   animation: banner_title .6s ease-in-out 0s normal forwards;
   z-index: 0;
@@ -129,9 +149,13 @@ body {
 
 
 .main_banner .blue_button {
-  margin-top: 100px;
+  background: none;
+  border: 2px solid #fff;
+  margin-top: 150px;
   width: 300px;
   opacity: 0;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -253,6 +277,124 @@ body {
 .about_learning__card__title p {
   align-self: start;
 }
+
+
+
+
+
+
+
+
+
+.learning__title {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.learning__title__area {
+  width: 80vw;
+  overflow: visible;
+}
+
+.learning__title h1 {
+  line-height: 1.2;
+  letter-spacing: .0001vw;
+  font-weight: 800;
+  font-size: 6.5vw;
+  animation: learning_title 3s ease-in-out 0s infinite alternate;
+}
+
+
+.learning_screen {
+  position: relative;
+  width: 100vw;
+  height: 132vh;
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: .6s;
+}
+
+
+.learning_screen__title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 100px 0 30px;
+  transition: .4s;
+}
+
+.learning_screen__title h4{
+  width: 600px;
+  margin-top: 20px;
+}
+
+
+.learning_screen__txt {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 200px;
+  position: sticky; d
+}
+
+.learning_screen__txt__blok {
+  display: grid;
+  grid-row-gap: 10px;
+  width: 340px;
+}
+
+.learning_screen__txt__blok h4 {
+  margin-bottom: 20px;
+}
+
+.learning_screen__txt__blok p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.learning_screen__img {
+  width: 50vw;
+  height: 36vh;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .1) 100%), url(img/learning_img1.jpg);
+  background-size: cover;
+  position: absolute;
+  right: 10vw;
+  top: 16vh;
+  z-index: 0;
+}
+
+.learning .learning_screen:nth-child(3) .learning_screen__img {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .1) 100%), url(img/learning_img2.jpg);
+  background-size: cover;
+}
+
+.learning_screen__button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url(img/about_learning_btn.svg);
+  background-size: cover;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  z-index: 10;
+}
+
+/* .learning_screen__title:hover .learning_screen__button {
+  background: url(img/about_learning_btn.svg), linear-gradient(to top, #E0A100, #E0A100);
+  background: url(img/about_learning_btn.svg), #E0A100;
+  background-size: cover;
+  filter: invert(100%);
+} */
+
+
 
 
 
@@ -631,4 +773,20 @@ body {
 .beginning__txt__line[data-scroll="out"]{
   width: 50%;
   opacity: .1;
+}
+
+
+
+
+
+
+
+
+
+.learning_screen[data-scroll="in"]{
+  opacity: 1;
+}
+
+.learning_screen[data-scroll="out"] {
+  opacity: .2;
 }

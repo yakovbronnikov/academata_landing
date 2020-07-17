@@ -6,8 +6,69 @@ setTimeout(() => {
 }, 0);
 
 window.onscroll = function() {
-  scrollFunction()
+  scrollFunction(),
+  scrollTitleFunction()
+
 };
+
+const mouseCursor = document.querySelector('.cursor');
+let learningScreen = document.querySelectorAll('.blue_button, .learning_screen__button, .header__nav a');
+
+
+
+window.addEventListener("mousemove", cursor)
+function cursor (e) {
+  mouseCursor.style.top = e.pageY + 'px';
+  mouseCursor.style.left = e.pageX + 'px';
+}
+
+
+
+
+
+
+learningScreen.forEach(screen => {
+
+  screen.addEventListener('mouseleave', () => {
+    mouseCursor.classList.remove('cursor_learn')
+  });
+
+  screen.addEventListener('mouseover', () => {
+    mouseCursor.classList.add('cursor_learn')
+  });
+
+});
+
+
+
+
+
+
+function scrollTitleFunction() {
+  const learningTitle1 = document.querySelector('.learning_screen__title1')
+  const learningTitle2 = document.querySelector('.learning_screen__title2')
+  let learningButton1 = learningTitle1.querySelector('.learning_screen__button')
+  let learningButton2 = learningTitle2.querySelector('.learning_screen__button')
+
+  if (document.body.scrollTop == learningTitle1.getBoundingClientRect().top || document.documentElement.scrollTop == learningTitle1.getBoundingClientRect().top) {
+    learningTitle1.style.background = "#fff";
+    learningButton1.style.opacity = "1";
+  } else {
+    learningTitle1.style.background = "none";
+    learningButton1.style.opacity = "0";
+  }
+
+
+  if (document.body.scrollTop == learningTitle2.getBoundingClientRect().top || document.documentElement.scrollTop == learningTitle2.getBoundingClientRect().top) {
+    learningTitle2.style.background = "#fff";
+    learningButton2.style.opacity = "1";
+  } else {
+    learningTitle2.style.background = "none";
+    learningButton2.style.opacity = "0";
+  }
+
+
+}
 
 
 function scrollFunction() {
@@ -119,4 +180,11 @@ ScrollOut({
 
 ScrollOut({
   targets: ".beginning__txt__line"
+});
+
+
+
+ScrollOut({
+  targets: ".learning_screen",
+  threshold: .4
 });

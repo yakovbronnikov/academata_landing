@@ -7,12 +7,19 @@
   h4 {font-size: 36px;}
   h5 {font-size: 24px;}
 
+
+  .cursor_learn {
+    background: rgba(0,0,0,0);
+    transform: scale(3);
+    backdrop-filter: invert(100%);
+  }
+
   .header {
     height: 100px;
   }
 
   .main_banner__img {
-    height: 80vh;
+    height: 65vh;
     right: 0;
     left: auto;
   }
@@ -34,6 +41,11 @@
   .about_learning__card__title p {
     width: 40%;
   }
+
+  .learning_screen__title {
+    padding: 200px 0 50px;
+  }
+
 
 
   .our_pluses__content__title {
@@ -59,9 +71,10 @@
   }
 
   .main_banner__img {
-    height: 800px;
-    right: -200px;
+    height: 600px;
+    right: 0;
     left: auto;
+    bottom: 150px;
   }
 
 
@@ -77,7 +90,7 @@
 
   * {font-size: 16px;}
 
-  h1 {font-size: 72px;}
+  h1 {font-size: 60px;}
   h2 {font-size: 36px;}
   h3 {font-size: 24px;}
   h4 {font-size: 20px;}
@@ -104,9 +117,10 @@
   }
 
   .main_banner__img {
-    height: 500px;
-    right: -100px;
+    height: 400px;
+    right: 0;
     left: auto;
+    bottom: 120px;
   }
 
 
