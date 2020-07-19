@@ -312,7 +312,7 @@ body {
 .learning_screen {
   position: relative;
   width: 100vw;
-  height: 140vh;
+  height: 150vh;
   padding: 0 10vw;
   /* display: flex;
   flex-direction: column;
@@ -526,31 +526,28 @@ body {
 
 
 .process_steps__screen__img {
-  background: #ededed;
-  background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTcrAp0F3D5ha7p076UWBXMuwqwHXCJkz1Bkw&usqp=CAU);
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 
-.process_steps .process_steps__screen:nth-child(3) .process_steps__screen__img {
+.process_steps .process_steps__screen:nth-child(2) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img1.jpg);
   background-size: cover;
 }
 
-.process_steps .process_steps__screen:nth-child(4) .process_steps__screen__img {
+.process_steps .process_steps__screen:nth-child(3) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img2.jpg);
   background-size: cover;
 }
 
-.process_steps .process_steps__screen:nth-child(5) .process_steps__screen__img {
+.process_steps .process_steps__screen:nth-child(4) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img3.jpg);
   background-size: cover;
 }
 
-.process_steps .process_steps__screen:nth-child(6) .process_steps__screen__img {
+.process_steps .process_steps__screen:nth-child(5) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img4.jpg);
   background-size: cover;
 }
