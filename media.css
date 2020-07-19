@@ -8,11 +8,11 @@
   h5 {font-size: 24px;}
 
 
-  .cursor_learn {
+  /* .cursor_learn {
     background: rgba(0,0,0,0);
     transform: scale(3);
     backdrop-filter: invert(100%);
-  }
+  } */
 
   .header {
     height: 100px;

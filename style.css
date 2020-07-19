@@ -312,16 +312,18 @@ body {
 .learning_screen {
   position: relative;
   width: 100vw;
-  height: 132vh;
+  height: 140vh;
   padding: 0 10vw;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
+  display: grid;
   transition: .6s;
 }
 
 
 .learning_screen__title {
+  align-self: start;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -336,6 +338,7 @@ body {
 
 
 .learning_screen__txt {
+  align-self: end;
   width: 80vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -345,7 +348,7 @@ body {
 
 .learning_screen__txt__blok {
   display: grid;
-  grid-row-gap: 10px;
+  grid-row-gap: 12px;
   width: 340px;
 }
 
@@ -366,7 +369,7 @@ body {
   background-size: cover;
   position: absolute;
   right: 10vw;
-  top: 16vh;
+  top: 5vw;
   z-index: 0;
 }
 
@@ -463,7 +466,7 @@ body {
 
 .process_steps__title {
   width: 100%;
-  padding: 100px 10vw 20px;
+  padding: 70px 10vw 20px;
   align-items: center;
   background: #fff;
   position: sticky;
@@ -471,31 +474,37 @@ body {
   z-index: 10;
 }
 
-.process_steps__subtitle {
-  padding: 0 10vw;
-  width: 70%;
+.process_steps__title h4{
+  margin-top: 30px;
+  width: 60vw;
   font-weight: 500;
 }
+
+
 
 .process_steps__screen {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4,1fr);
+  /* grid-template-rows: repeat(4,1fr); */
   grid-column-gap: 30px;
   width: 100%;
-  height: 70vh;
+  height: 40vh;
   position: relative;
-  margin: 400px 0;
+  margin: 600px 0;
   padding: 0 10vw;
 }
 
 .process_steps__screen__content {
   color: #000;
-  padding: 80px 0;
-  grid-row: 1/5;
+}
+
+
+.process_steps__screen__content  h3 {
+  max-width: 600px;
 }
 
 .process_steps__screen__content p {
+  max-width: 400px;
   margin: 20px 0 30px;
   font-weight: 500;
   line-height: 1.5;
@@ -509,29 +518,20 @@ body {
 
 
 .process_steps__screen__number {
-  grid-row: 1/3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: .5;
-}
-
-.process_steps__screen__number  span {
-  background: linear-gradient(180deg, #7EB9FF 0%, #EAF3FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 150px;
+  color: #fff;
+  font-size: 100px;
   font-weight: 800;
+  opacity: 1;
 }
 
 
 .process_steps__screen__img {
-  grid-row: 3/5;
-  grid-column: 2/3;
   background: #ededed;
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTcrAp0F3D5ha7p076UWBXMuwqwHXCJkz1Bkw&usqp=CAU);
   background-size: cover;
-  transform-origin: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
