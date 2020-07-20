@@ -196,87 +196,130 @@ body {
 
 
 
+
+
+
+
 .about_learning {
+  width: 100vw;
   padding: 200px 10vw;
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
-  grid-column-gap: 30px;
-  grid-row-gap: 80px;
+  grid-row-gap: 50px;
 }
 
-.about_learning h1 {
-  /* grid-column: 1/3; */
-  font-weight: 800;
-  line-height: 1.2;
+.about_learning__title {
+  padding-bottom: 60px;
 }
 
 .about_learning__card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 2px solid rgba(0,0,0,.05) ;
   position: relative;
-  transition: .4s;
-}
-
-.about_learning__card:hover {
-  box-shadow: 0 0 20px rgba(0,0,0,.15);
-}
-
-
-.about_learning__card__button {
-  width: 60px;
-  height: 60px;
-  background: url(img/about_learning_btn.svg);
-  position: absolute;
-  bottom: 40px;
-  right: 20px;
-  opacity: 0.2;
-  transition: .4s;
-}
-
-.about_learning__card:hover .about_learning__card__button {
-  opacity: 1;
-}
-
-.about_learning__card p {
-  width: 60%;
-}
-
-
-.about_learning__card__info {
   display: grid;
-  grid-row-gap: 20px;
-  padding: 0 20px;
-  margin: 40px 0;
-}
-
-
-
-.about_learning__card__title {
-  grid-column: 1/3;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  max-width: 80vw;
   height: 320px;
-  background: url(img/about_learning_img1.jpg);
-  background-size: cover;
-  display: grid;
-  grid-template-rows: 4fr 1fr;
-  align-items: end;
-  padding: 30px 20px;
-  color: #fff;
+  padding: 30px;
 }
 
 
-.about_learning .about_learning__card:nth-child(3) .about_learning__card__title {
-  background: url(img/about_learning_img2.jpg);
-  background-size: cover;
+.about_learning__card:hover .about_learning__card__stroke{
+  box-shadow: 0 4px 20px rgba(0,0,0,.20);
+  border: 2px solid rgba(0,0,0,.1);
 }
 
-.about_learning__card__title h3 {
-  padding: 10px 0;
+.about_learning__card:hover .about_learning__card__btn {
+  opacity: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
 }
+
+
 
 .about_learning__card__title p {
-  align-self: start;
+  font-weight: 500;
+  width: 90%;
+  margin-top: 10px;
 }
+
+
+.about_learning__card__txt {
+  display: grid;
+  grid-row-gap: 10px;
+  opacity: 0;
+  align-self: start
+}
+
+.about_learning__card__txt p {
+  font-size: 16px;
+}
+
+.about_learning__card__txt h5 {
+  margin-bottom: 6px;
+}
+
+
+.about_learning__card__stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37vw;
+  height: 100%;
+  border: 2px solid rgba(0,0,0,1);
+  transition: .3s;
+}
+
+.about_learning__card__btn {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: url(img/about_learning_btn.svg);
+  background-size: cover;
+  opacity: .2;
+  transition: .3s;
+}
+
+
+.about_learning__card2 {
+  transform: translate(40vw,-370px);
+}
+
+
+@keyframes about_learning__card2 {
+  40% {transform: translate(40vw,0);}
+  80% {transform: translate(0,0);}
+  100% {transform: translate(0,0);}
+}
+
+@keyframes about_learning__card__txt {
+  80% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes about_learning__card__stroke {
+  40% {width: 37vw;}
+  80% {width: 80vw;}
+  100% {width: 80vw;}
+}
+
+
+.about_learning[data-scroll="in"] .about_learning__card2 {
+  animation: about_learning__card2 1.5s ease-in-out 1.5s normal forwards;
+}
+
+.about_learning[data-scroll="in"] .about_learning__card__txt {
+  animation: about_learning__card__txt 1.5s ease-in-out 1.5s normal forwards;
+}
+
+.about_learning[data-scroll="in"] .about_learning__card__stroke {
+  animation: about_learning__card__stroke 1.5s ease-in-out 1.5s normal forwards;
+}
+
+
+
+
+
 
 
 

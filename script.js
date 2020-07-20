@@ -188,3 +188,9 @@ ScrollOut({
   targets: ".learning_screen",
   threshold: .4
 });
+
+
+ScrollOut({
+  targets: ".about_learning",
+  threshold: .2
+});
