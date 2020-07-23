@@ -12,7 +12,7 @@ window.onscroll = function() {
 };
 
 const mouseCursor = document.querySelector('.cursor');
-let learningScreen = document.querySelectorAll('.blue_button, .learning_screen__button, .header__nav a');
+let learningScreen = document.querySelectorAll('.learning_screen__button, .header__nav a, .form_close');
 
 
 
@@ -76,8 +76,9 @@ function scrollFunction() {
   const header = document.querySelector('.header')
   let navBar = header.querySelectorAll('a')
   let blueButton = header.querySelector('.blue_button')
+  const ourPluses = document.querySelector('.our_pluses')
 
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    if (document.body.scrollTop > ourPluses.getBoundingClientRect().bottom || document.documentElement.scrollTop > ourPluses.getBoundingClientRect().bottom) {
         header.style.position = "fixed";
         header.style.background = "#fff";
         header.style.boxShadow = "0 4px 20px rgba(0,0,0,.15)";

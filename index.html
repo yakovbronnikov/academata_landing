@@ -10,9 +10,76 @@
   <link rel="stylesheet" href="media.css">
 </head>
 <body>
+
   <div class="cursor"></div>
+
+  <input type="radio" name="forms" id="pay_form_close">
+  <input type="radio" name="forms" id="free_form_close">
+  <input type="radio" name="forms" id="pay_form">
+  <input type="radio" name="forms" id="free_form">
+
+  <div class="pay_form">
+    <div class="pay_form__bg"></div>
+    <div class="pay_form__bg"></div>
+    <form action="" class="pay_form__window">
+      <div class="pay_form__title">
+        <h1>Заявка</h1>
+        <h3>на обучение в Академии</h3>
+      </div>
+      <div class="pay_form__inputs">
+        <div class="form_input">
+          <input type="text" class="form_input__field" required>
+          <span>Ваше имя</span>
+        </div>
+        <div class="form_input">
+          <input type="text" class="form_input__field" required>
+          <span>Ваше e-mail</span>
+        </div>
+        <div class="pay_form__buttons">
+          <input type="submit" class="blue_button">
+          <label for="free_form">Бесплатное обучение</label>
+        </div>
+      </div>
+      <label for="pay_form_close" class="form_close"> </label>
+    </form>
+  </div>
+
+
+  <div class="free_form">
+    <div class="free_form__bg"></div>
+    <div class="free_form__bg"></div>
+    <form action="" class="free_form__window">
+      <div class="free_form__title">
+        <h1>Заявка</h1>
+        <h3>на бесплатное обучение в Академии</h3>
+      </div>
+      <div class="free_form__inputs">
+        <div class="form_input">
+          <input type="text" class="form_input__field" required>
+          <span>Ваше имя</span>
+        </div>
+        <div class="form_input">
+          <input type="text" class="form_input__field" required>
+          <span>Ваше e-mail</span>
+        </div>
+        <div class="form_input">
+          <!-- <textarea class="form_input__field"  name="name" rows="8" cols="80"></textarea> -->
+          <input type="text" class="form_input__field" required>
+          <span>Расскажите о себе</span>
+        </div>
+        <div class="free_form__buttons">
+          <input type="file" id="free_form__file">
+          <label for="free_form__file">Загрузить резюме</label>
+          <input type="submit" class="blue_button">
+        </div>
+      </div>
+      <label for="free_form_close" class="form_close"> </label>
+    </form>
+  </div>
+
+
   <header class="header">
-    <div class="blue_button">Начать обучение</div>
+    <label for="pay_form" class="blue_button">Начать обучение</label>
     <img src="img/banner_logo.svg" class="header__logo"></img>
     <div class="header__nav">
       <a href="">Для кого</a>
@@ -21,13 +88,15 @@
       <a href="">Преподаватели</a>
     </div>
   </header>
+
+
   <div class="main_banner">
     <div class="main_banner__title">
       <h1>Хочешь стать</h1>
       <h1>известным блоггером</h1>
       <h1>и журналистом?</h1>
     </div>
-    <div class="blue_button">Начать обучение</div>
+    <label for="pay_form" class="blue_button">Начать обучение</label>
     <img src="img/main_banner_img.svg" alt="" class="main_banner__img">
   </div>
 

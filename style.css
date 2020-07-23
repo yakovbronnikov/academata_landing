@@ -830,3 +830,414 @@ body {
 .learning_screen[data-scroll="out"] {
   opacity: .2;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+input {
+  position: relative;
+  z-index: 1;
+}
+
+
+.form_input {
+  position: relative;
+  height: 92px;
+  grid-column: 1/2
+}
+
+.form_input__field {
+  background: none;
+  border: none;
+  width: 50%;
+  height: inherit;
+  box-shadow: 0 2px 0 rgba(0,0,0,.2);
+  font-size: 36px;
+  transition: .4s;
+  font-weight: 700;
+  overflow: visible;
+}
+
+.form_input span {
+  font-weight: 700;
+  font-size: 36px;
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  opacity: .3;
+  transition: .4s;
+  transform-origin: left;
+}
+
+.form_input__field:focus {
+  outline: none;
+  width: 90%;
+  box-shadow: 0 2px 0 rgba(0,0,0,1);
+}
+
+.form_input__field:focus ~ span,
+.form_input__field:valid ~ span {
+  transform: scale(.5) translateY( -80px);
+  opacity: 1;
+}
+
+.form_close {
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  width: 60px;
+  height: 60px;
+  background: url(img/form_close.svg);
+  background-size: cover;
+  opacity: .2;
+
+}
+
+.form_close:hover {
+  opacity: 1;
+  transition: .4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+.pay_form, .free_form {
+  position: fixed;
+  top: 0;left: 0;right: 0;bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: -3;
+  opacity: 0;
+}
+
+.pay_form__bg {
+  background: #ededed;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.pay_form__window {
+  position: absolute;
+  top: 100px;left: 0;right: 0; bottom: 100px;
+  padding: 0 10vw;
+  display: grid;
+  align-items: end;
+}
+
+.pay_form__inputs {
+  display: grid;
+  grid-row-gap: 80px;
+}
+
+.pay_form__title {
+  align-self: start;
+  grid-column: 1/3;
+}
+
+
+.pay_form__window .blue_button {
+  height: 66px;
+  border: none;
+  color: #fff;
+  width: 240px;
+}
+
+.pay_form__buttons {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay_form__buttons label {
+  height: 66px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 50px;
+  transition: .4s;
+  border: 2px solid rgba(0,0,0,.1);
+}
+
+.pay_form__buttons label:hover {
+  border: 2px solid rgba(0,0,0,1);
+}
+
+
+
+
+
+
+
+
+
+
+.free_form__bg {
+  background: #1c1c1c;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.free_form__window {
+  position: absolute;
+  top: 100px;left: 0;right: 0; bottom: 100px;
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  color: #fff;
+}
+
+.free_form__inputs {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 50px;
+  align-items: end;
+}
+
+.free_form__title {
+  grid-column: 1/3;
+  align-self: start;
+}
+
+
+.free_form__window .blue_button {
+  border: none;
+  color: #fff;
+  width: 200px;
+  height: 66px;
+}
+
+.free_form__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.free_form__buttons label {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 30px;
+  transition: .4s;
+  border: 2px solid rgba(255,255,255,.1);
+  margin-right: 30px;
+}
+
+.free_form__buttons label:hover {
+  border: 2px solid rgba(255,255,255,1);
+}
+
+
+
+.free_form__window .form_input {
+  grid-column: 1/2;
+}
+
+
+.free_form__window  .form_input__field {
+  box-shadow: 0 2px 0 rgba(255,255,255,.2);
+  color: #fff;
+}
+
+.free_form__window  .form_input__field:focus {
+  box-shadow: 0 2px 0 rgba(255,255,255,1);
+}
+
+.free_form__window .form_close {
+  filter: invert(100%);
+}
+
+
+.free_form__window .form_input__field:focus {
+  width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pay_form:checked ~ .pay_form, #free_form:checked ~ .free_form{
+  animation: pay_form 1.2s ease-in-out forwards;
+}
+
+#pay_form:checked ~ .pay_form .pay_form__bg {
+  animation: pay_form__bg 1.2s ease-in-out forwards;
+}
+
+
+#pay_form:checked ~ .pay_form .pay_form__window,
+#free_form:checked ~ .free_form .free_form__window{
+  animation: pay_form__window 1.2s ease-in-out forwards;
+}
+
+
+
+
+
+#pay_form_close:checked ~ .pay_form{
+  animation: pay_form__close 1.2s ease-in-out forwards;
+}
+
+
+#pay_form_close:checked ~ .pay_form .pay_form__bg{
+  transform-origin: right;
+  animation: pay_form__bg__close 1.2s ease-in-out forwards;
+}
+
+
+#pay_form_close:checked ~ .pay_form .pay_form__window,
+#free_form_close:checked ~ .free_form .free_form__window{
+  animation: pay_form__window__close 1.2s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+
+#free_form:checked ~ .pay_form {
+  animation: pay_form__close2 1.2s ease-in-out forwards;
+}
+
+#free_form:checked ~ .pay_form .pay_form__bg {
+  animation: pay_form__bg__close2 1.2s ease-in-out forwards;
+}
+
+#free_form_close:checked ~ .free_form{
+  animation: free_form__close 1.2s ease-in-out forwards;
+}
+
+#free_form_close:checked ~ .free_form .free_form__bg{
+  transform-origin: right;
+  animation: free_form__bg__close 1.2s ease-in-out forwards;
+}
+
+#free_form:checked ~ .free_form .free_form__bg{
+  animation: free_form__bg 1.2s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+
+@keyframes pay_form {
+  0%{z-index: -3; opacity: 0;}
+  1%{z-index: 102; opacity: 1;}
+  100%{z-index: 102; opacity: 1;}
+}
+
+@keyframes pay_form__bg {
+  0%{transform: scaleX(0);}
+  1%{transform: scaleX(0);}
+  50% {background: #ededed;}
+  80%{transform: scaleX(1);}
+  100%{transform: scaleX(1); background: #fff;}
+}
+
+
+
+@keyframes pay_form__window {
+  0%{opacity: 0;}
+  80%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+
+
+
+
+@keyframes pay_form__close {
+  0%{z-index: 102; opacity: 1;}
+  99%{z-index: 102; opacity: 1;}
+  100%{z-index: -3; opacity: 0;}
+}
+
+@keyframes pay_form__bg__close {
+  0%{transform: scaleX(1); background: #fff;}
+  20%{transform: scaleX(1);}
+  50% {background: #ededed;}
+  99%{transform: scaleX(0);}
+}
+
+@keyframes pay_form__bg__close2 {
+  0%{transform: scaleX(1); background: #fff;}
+  100%{transform: scaleX(1);background: #fff;}
+}
+
+
+
+@keyframes pay_form__window__close {
+  0%{opacity: 1;}
+  50%{opacity: 0;}
+  100%{opacity: 0;}
+}
+
+
+
+
+
+@keyframes pay_form__close2 {
+  0%{z-index: 102; opacity: 1;}
+  99%{z-index: 102; opacity: 1;}
+  100%{z-index: -3; opacity: 0;}
+}
+
+
+
+@keyframes free_form__close {
+  0%{z-index: 101; opacity: 1;}
+  99%{z-index: 101; opacity: 1;}
+  100%{z-index: -3; opacity: 0;}
+}
+
+
+@keyframes free_form__bg__close {
+  0%{transform: scaleX(1);}
+  20%{transform: scaleX(1);}
+  99%{transform: scaleX(0);}
+}
+
+@keyframes free_form__bg {
+  0%{transform: scaleX(0);}
+  1%{transform: scaleX(0);}
+  80%{transform: scaleX(1);}
+  100%{transform: scaleX(1);}
+}
+
+
+
+
+
+
+#pay_form_close, #free_form_close, #pay_form, #free_form, #free_form__file {
+  display: none;
+}
