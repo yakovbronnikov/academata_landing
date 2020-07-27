@@ -75,7 +75,7 @@
 
 
 
-@media (min-width: 960px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
 
   * {font-size: 16px;}
 
@@ -127,6 +127,26 @@
   }
 
 
+  .teachers__info{
+    width: 200px;
+  }
+
+  .teachers__txt {
+    max-width: 350px;
+  }
+
+
+
+  .help_form {
+    height: auto;
+  }
+
+
+  .help_form__title {
+    margin-bottom: 100px;
+  }
+
+
 
 
 
@@ -155,8 +175,18 @@
 
   body {overflow-x: hidden;}
 
+
+
+  .header {
+    height: 100px;
+  }
+
+  .header__logo {
+    height: 50px;
+  }
+
   .main_banner__img {
-    height: 400px;
+    height: 500px;
     right: 0;
     left: auto;
     bottom: 100px;
@@ -166,7 +196,41 @@
     padding-bottom: 0;
   }
 
-  .about_learning__card{grid-column: 1/3}
+  .about_learning__card{
+    grid-column: 1/3;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+    height: auto;
+    padding-right: 30%;
+  }
+
+  .about_learning__card__btn {
+    left: auto;
+    right: 30px;
+  }
+
+
+  .about_learning[data-scroll="in"] .about_learning__card2 {
+    animation: none;
+    transform: translate(0,0);
+  }
+
+  .about_learning[data-scroll="in"] .about_learning__card__txt {
+    animation: none;
+    opacity: 1;
+  }
+
+  .about_learning[data-scroll="out"] .about_learning__card__txt {
+    opacity: 0;
+  }
+
+  .about_learning[data-scroll="in"] .about_learning__card__stroke {
+    animation: none;
+  }
+
+  .about_learning__card__stroke {
+    width: 80vw;
+  }
 
 
   .learning_screen__img {
@@ -192,6 +256,52 @@
 
   .our_pluses__content__title  {
     font-size: 30px;
+  }
+
+
+
+
+
+  .process_steps__screen {
+    grid-template-columns: 1fr;
+  }
+
+
+
+
+
+  .teachers__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+
+
+  .teachers__txt  {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    justify-self: start;
+  }
+
+  .teachers__avatar {
+    height: 200px;
+    width: 200px;
+  }
+
+  .teachers__info {
+    margin: 0;
+  }
+
+
+
+
+  .help_form {
+    height: auto;
+  }
+
+
+  .help_form__title {
+    margin-bottom: 100px;
   }
 
 

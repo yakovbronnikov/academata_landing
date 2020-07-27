@@ -12,6 +12,7 @@ h4 {font-size: 24px;}
 h5 {font-size: 20px;}
 
 body {
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -130,6 +131,7 @@ body {
   padding: 0 10vw;
   background: linear-gradient(284.41deg, #147FFF 0%, #003C83 100%);
   color: #fff;
+  overflow: hidden;
 }
 
 .main_banner__img {
@@ -205,6 +207,7 @@ body {
   padding: 200px 10vw;
   display: grid;
   grid-row-gap: 50px;
+  overflow: hidden;
 }
 
 .about_learning__title {
@@ -245,7 +248,8 @@ body {
   display: grid;
   grid-row-gap: 10px;
   opacity: 0;
-  align-self: start
+  align-self: start;
+  transition: .6s .2s;
 }
 
 .about_learning__card__txt p {
@@ -456,6 +460,7 @@ body {
   width: 100vw;
   background: #1C1C1C;
   position: relative;
+  overflow: hidden;
 }
 
 .our_pluses__title {
@@ -465,6 +470,7 @@ body {
   height: 600px;
   padding-top: 200px;
   background: linear-gradient(179.68deg, #1C1C1C 60%, rgba(28, 28, 28, 0) 75%);
+  -webkit-position: sticky;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -505,6 +511,7 @@ body {
   width: 100vw;
   padding: 0 0;
   position: relative;
+  overflow: hidden;
 }
 
 .process_steps__title {
@@ -608,6 +615,7 @@ body {
   background: linear-gradient(90deg, rgba(0, 31, 67, 0.77) 0%, rgba(0, 97, 214, 0.5) 100%), url(img/beginning_bg.jpg) no-repeat;
   background-size: cover;
   padding: 20vh 10vw 10vh;
+  overflow: hidden;
 }
 
 .beginning__title {
@@ -650,6 +658,7 @@ body {
 .reviews {
   width: 100vw;
   padding: 15vh 0 20vh;
+  overflow: hidden;
 }
 
 .reviews h1 {
@@ -800,6 +809,7 @@ body {
   background: linear-gradient(90deg, rgba(0, 31, 67, 0.77) 0%, rgba(0, 97, 214, 0.5) 100%), url(img/travel_img.jpg) no-repeat;
   background-size: cover;
   padding: 20vh 10vw 10vh;
+  overflow: hidden;
 }
 
 .travel__title {
@@ -829,7 +839,9 @@ body {
 
 
 
-
+.teachers {
+  overflow: hidden;
+}
 
 
 .teachers__title {
@@ -915,6 +927,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
+  overflow: hidden;
 }
 
 .help_form__title {
@@ -1247,7 +1260,9 @@ body {
 
 .pay_form, .free_form {
   position: fixed;
-  top: 0;left: 0;right: 0;bottom: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   z-index: -3;
