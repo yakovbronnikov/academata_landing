@@ -186,10 +186,14 @@
   }
 
   .main_banner__img {
-    height: 500px;
+    height: 380px;
     right: 0;
     left: auto;
-    bottom: 100px;
+    bottom: 0;
+  }
+
+  .main_banner .blue_button {
+    margin-top: 80px;
   }
 
   .main_banner__title {
@@ -201,12 +205,14 @@
     grid-template-columns: 1fr;
     grid-row-gap: 50px;
     height: auto;
+    padding: 60px 30px;
     padding-right: 30%;
   }
 
   .about_learning__card__btn {
     left: auto;
     right: 30px;
+    bottom: 60px;
   }
 
 
@@ -264,6 +270,24 @@
 
   .process_steps__screen {
     grid-template-columns: 1fr;
+    height: auto;
+    grid-row-gap: 50px;
+    margin: 300px 0;
+  }
+
+  .process_steps__screen__img {
+    height: 400px;
+  }
+
+
+
+  .beginning {
+    grid-template-columns: 1fr;
+  }
+
+  .beginning .blue_button {
+    grid-column: 1/2;
+    justify-self: start;
   }
 
 
@@ -297,11 +321,18 @@
 
   .help_form {
     height: auto;
+    grid-template-columns: 1fr;
   }
 
 
   .help_form__title {
     margin-bottom: 100px;
+  }
+
+  .help_form .blue_button {
+    grid-column: 1/2;
+    justify-self: start;
+    margin-top: 100px;
   }
 
 

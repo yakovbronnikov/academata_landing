@@ -13,8 +13,18 @@ h5 {font-size: 20px;}
 
 body {
   width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
+
+body > * {
+  scroll-snap-align: start;
+  scroll-margin: 100%;
+}
+
+
 
 
 .cursor {
@@ -41,7 +51,12 @@ body {
 
 .blue_button {
   font-weight: 500;
-  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
   padding: 20px 50px;
   background: #0066E0;
   transition: .4s;
@@ -470,7 +485,7 @@ body {
   height: 600px;
   padding-top: 200px;
   background: linear-gradient(179.68deg, #1C1C1C 60%, rgba(28, 28, 28, 0) 75%);
-  -webkit-position: sticky;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
