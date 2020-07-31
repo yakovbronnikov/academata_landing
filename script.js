@@ -128,6 +128,84 @@ function scrollFunction() {
     });
 
   }
+
+
+
+  const subtitle1 = document.querySelector(".learning__subtitle1");
+  const subtitle2 = document.querySelector(".learning__subtitle2");
+
+  const description1 = document.querySelector(".learning__title__description1");
+  const description2 = document.querySelector(".learning__title__description2");
+
+  let screen1 = document.querySelector(".learning_screen1");
+  let screen2 = document.querySelector(".learning_screen2");
+
+  let learningButton = document.querySelector(".learning_screen__button");
+
+  let learningMain = document.querySelector(".learning__title__main");
+
+
+
+  if (
+    document.documentElement.scrollTop > screen1.getBoundingClientRect().bottom
+  ) {
+    subtitle1.style.opacity = 1;
+    subtitle1.style.transform = "translateY(0px)";
+
+    description1.style.opacity = 1;
+    description1.style.transform = "translateY(0)";
+
+    learningButton.style.opacity = 1;
+
+    learningMain.style.fontSize = "48px";
+  } else {
+    subtitle1.style.opacity = 0;
+    subtitle1.style.transform = "translateY(-100px)";
+
+    description1.style.opacity = 0;
+    description1.style.transform = "translateY(-100px)";
+
+    learningButton.style.opacity = 0;
+
+    learningMain.style.fontSize = "96px";
+  }
+
+  if (
+    document.documentElement.scrollTop > (screen2.getBoundingClientRect().bottom + 800)
+  ) {
+    subtitle1.style.opacity = 0;
+    subtitle1.style.transform = "translateY(-100px)";
+
+    subtitle2.style.opacity = 1;
+    subtitle2.style.transform = "translateY(0)";
+
+    description1.style.opacity = 0;
+    description2.style.transform = "translateY(0)";
+
+    description2.style.opacity = 1;
+    description1.style.transform = "translateY(-100px)";
+
+  } else if(
+    document.documentElement.scrollTop > (screen1.getBoundingClientRect().bottom + 800)
+  ) {
+    subtitle1.style.opacity = 1;
+    subtitle1.style.transform = "translateY(0)";
+
+    subtitle2.style.opacity = 0;
+    subtitle2.style.transform = "translateY(100px)";
+
+    description1.style.opacity = 1;
+    description1.style.transform = "translateY(0)";
+
+
+    description2.style.opacity = 0;
+    description2.style.transform = "translateY(100px)";
+  }
+
+
+  console.log(screen1.getBoundingClientRect().top, document.documentElement.scrollTop);
+
+
 }
 
 
