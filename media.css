@@ -7,13 +7,6 @@
   h4 {font-size: 36px;}
   h5 {font-size: 24px;}
 
-
-  /* .cursor_learn {
-    background: rgba(0,0,0,0);
-    transform: scale(3);
-    backdrop-filter: invert(100%);
-  } */
-
   .header {
     height: 100px;
   }
@@ -24,8 +17,18 @@
     left: auto;
   }
 
+
+  .learning__title__description {
+    margin-top: 30px;
+    height: 100px;
+  }
+
   .learning_screen__title {
     padding: 200px 0 50px;
+  }
+
+  .learning__title__main__scroll {
+    font-size: 60px;
   }
 
 
@@ -33,6 +36,35 @@
   .our_pluses__content__title {
     width: 1200px;
   }
+
+  .process_steps__title {
+    padding: 80px 10vw 20px;
+  }
+
+  .process_steps__title__main_scroll {
+    font-size: 72px;
+  }
+
+  .process_steps__screen__content  h4,
+  .process_steps__screen__content  p {
+    max-width: 500px;
+  }
+
+  .process_screen_animate[data-scroll="in"] .process_steps__screen__content__line {width: 500px;}
+
+
+
+
+
+  .reviews {
+    padding: 20vh 0 15vw;
+  }
+
+
+  .reviews h1 {
+    padding: 0 10vw 200px;
+  }
+
 }
 
 
@@ -173,7 +205,7 @@
 
   * {font-size: 16px;}
 
-  h1 {font-size: 60px;}
+  h1 {font-size: 50px;}
   h2 {font-size: 36px;}
   h3 {font-size: 24px;}
   h4 {font-size: 20px;}
@@ -183,7 +215,7 @@
 
   body {overflow-x: hidden;}
 
-
+  .cursor {display: none;}
 
   .header {
     height: 100px;
@@ -216,6 +248,11 @@
     padding: 60px 30px;
     padding-right: 30%;
   }
+
+
+
+
+
 
   .about_learning__card__btn {
     left: auto;
@@ -263,6 +300,35 @@
   }
 
 
+
+
+
+
+
+  .learning__title {overflow: hidden;}
+
+  .learning__title__main  {
+    font-size: 60px;
+  }
+
+  .learning__title__main__scroll  {
+    font-size: 36px;
+  }
+
+  .learning__title__description {
+    max-width: 400px;
+  }
+
+  .learning_screen__button {
+    bottom: 50px;
+    width: 80px;
+    height: 80px;
+  }
+
+
+
+
+
   .our_pluses__title h1 {
     width: 70vw;
   }
@@ -272,20 +338,43 @@
     font-size: 30px;
   }
 
+  .our_pluses__content__item {margin: 0;padding-right: 0; max-width: 600px;}
+
+
+
 
 
 
 
   .process_steps__screen {
-    grid-template-columns: 1fr;
-    height: auto;
-    grid-row-gap: 50px;
     margin: 300px 0;
+    grid-column-gap: 50px;
   }
 
   .process_steps__screen__img {
-    height: 300px;
+
   }
+
+
+  .process_steps__title {padding-top: 80px;}
+  .process_steps__title__main_scroll {font-size: 48px;}
+  .process_steps__title h4 {width: auto;}
+
+
+  .process_steps__screen__content  h4,
+  .process_steps__screen__content  p,
+  .process_screen_animate[data-scroll="in"] .process_steps__screen__content__line {
+    width: 100%;
+  }
+
+  .process_steps__screen__content  p {margin: 20px 0;}
+
+
+
+
+
+
+
 
 
 
@@ -299,7 +388,14 @@
   }
 
 
+  .travel__gallery {
+    grid-template-columns: 1fr 1fr;
+  }
 
+  .travel__gallery__img:nth-child(2),
+  .travel__gallery__img:nth-child(3) {
+    grid-column: auto;
+  }
 
 
   .teachers__card {
@@ -337,6 +433,10 @@
     margin-bottom: 100px;
   }
 
+  .help_form__title h3 {
+    margin-top: 20px;
+  }
+
   .help_form .blue_button {
     grid-column: 1/2;
     justify-self: start;
@@ -362,6 +462,9 @@
 
 }
 
+@media (min-width: 960px) and (max-width: 1024px) {
+  h1 {font-size: 60px;}
+}
 
 
 
@@ -376,12 +479,13 @@
 
 
 
-@media (min-width: 320px) and (max-width: 768px) {
+
+@media (max-width: 767px) {
 
 
   * {font-size: 14px;}
 
-  h1 {font-size: 36px;}
+  h1 {font-size: 30px;}
   h2 {font-size: 28px;}
   h3 {font-size: 22px;}
   h4 {font-size: 18px;}
@@ -391,14 +495,20 @@
 
   body {overflow-x: hidden;}
 
+  .cursor {display: none;}
+
 
 
   .header {
-    height: 100px;
+    height: 50px;
   }
 
   .header__logo {
-    height: 50px;
+    height: 30px;
+  }
+
+  .main_banner {
+    padding: 0 20px;
   }
 
   .main_banner__img {
@@ -410,11 +520,20 @@
 
   .main_banner .blue_button {
     margin-top: 80px;
+    width: auto;
   }
 
   .main_banner__title {
     padding-bottom: 0;
   }
+
+
+
+
+
+
+
+
 
   .about_learning__card{
     grid-column: 1/3;
@@ -471,17 +590,74 @@
   }
 
 
-  .our_pluses__title h1 {
-    width: 70vw;
+
+
+
+
+  .learning__title {padding: 30px 20px 0;}
+  .learning__title__main {font-size: 36px;}
+  .learning__title__main__scroll {font-size: 28px;}
+  .learning__title__description {height: 80px;}
+
+
+  .learning_screen {padding: 0 20px;}
+
+  .learning_screen__button {
+    width: 50px;
+    height: 50px;
   }
+
+  .learning_screen__txt__blok {width: auto;}
+
+  .learning_screen__txt__blok p {
+    font-size: 14px;
+  }
+
+
+
+
+
+  .our_pluses__title {
+    height: 350px;
+    background: linear-gradient(179.68deg, #1C1C1C 50%, rgba(28, 28, 28, 0) 65%);
+    padding: 0 20px;
+    padding-top: 90px;
+  }
+
+  .our_pluses__title h1 {
+    width: auto;
+  }
+
+  .our_pluses__content__item {padding: 50px 20px;}
 
 
   .our_pluses__content__title  {
-    font-size: 22px;
+    font-size: 18px;
   }
 
+  .title1[data-scroll="in"],
+  .title2[data-scroll="in"],
+  .title3[data-scroll="in"],
+  .title4[data-scroll="in"],
+  .title5[data-scroll="in"],
+  .title6[data-scroll="in"],
+  .title7[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+
+  .our_pluses__end {height: 150px;}
 
 
+
+
+  .process_steps__title {
+    padding: 50px 20px 10px;
+  }
+
+  .process_steps__title__main_scroll {
+    font-size: 18px;
+  }
 
 
   .process_steps__screen {
@@ -497,6 +673,9 @@
 
 
 
+
+
+
   .beginning {
     grid-template-columns: 1fr;
   }
@@ -505,6 +684,12 @@
     grid-column: 1/2;
     justify-self: start;
   }
+
+
+
+
+
+  .reviews_slider__card {padding: 0 20px;}
 
 
   .travel__txt {grid-column: 1/3;}

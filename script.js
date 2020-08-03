@@ -94,6 +94,13 @@ function onChangeForm({ name, value }) {
 
 
 
+
+let process = document.querySelector(".process_steps");
+const processCoords = process.getBoundingClientRect().top;
+
+
+
+
 function scrollFunction() {
   const header = document.querySelector(".header");
   let navBar = header.querySelectorAll("a");
@@ -131,14 +138,14 @@ function scrollFunction() {
 
 
 
-  const subtitle1 = document.querySelector(".learning__subtitle1");
-  const subtitle2 = document.querySelector(".learning__subtitle2");
+  const subtitleLearning1 = document.querySelector(".learning__subtitle1");
+  const subtitleLearning2 = document.querySelector(".learning__subtitle2");
 
-  const description1 = document.querySelector(".learning__title__description1");
-  const description2 = document.querySelector(".learning__title__description2");
+  const descriptionLearning1 = document.querySelector(".learning__title__description1");
+  const descriptionLearning2 = document.querySelector(".learning__title__description2");
 
-  let screen1 = document.querySelector(".learning_screen1");
-  let screen2 = document.querySelector(".learning_screen2");
+  let screenLearning1 = document.querySelector(".learning_screen1");
+  let screenLearning2 = document.querySelector(".learning_screen2");
 
   let learningButton = document.querySelector(".learning_screen__button");
 
@@ -147,63 +154,79 @@ function scrollFunction() {
 
 
   if (
-    document.documentElement.scrollTop > screen1.getBoundingClientRect().bottom
+    document.documentElement.scrollTop > screenLearning1.getBoundingClientRect().bottom
   ) {
-    subtitle1.style.opacity = 1;
-    subtitle1.style.transform = "translateY(0px)";
+    subtitleLearning1.style.opacity = 1;
+    subtitleLearning1.style.transform = "translateX(0px)";
 
-    description1.style.opacity = 1;
-    description1.style.transform = "translateY(0)";
+    descriptionLearning1.style.opacity = 1;
+    descriptionLearning1.style.transform = "translateX(0)";
 
     learningButton.style.opacity = 1;
 
-    learningMain.style.fontSize = "48px";
+    learningMain.classList.add("learning__title__main__scroll");
   } else {
-    subtitle1.style.opacity = 0;
-    subtitle1.style.transform = "translateY(-100px)";
+    subtitleLearning1.style.opacity = 0;
+    subtitleLearning1.style.transform = "translateX(-200px)";
 
-    description1.style.opacity = 0;
-    description1.style.transform = "translateY(-100px)";
+    descriptionLearning1.style.opacity = 0;
+    descriptionLearning1.style.transform = "translateX(-200px)";
 
     learningButton.style.opacity = 0;
 
-    learningMain.style.fontSize = "96px";
+    learningMain.classList.remove("learning__title__main__scroll");
   }
 
   if (
-    document.documentElement.scrollTop > (screen2.getBoundingClientRect().bottom + 800)
+    document.documentElement.scrollTop > (screenLearning2.getBoundingClientRect().bottom + 800)
   ) {
-    subtitle1.style.opacity = 0;
-    subtitle1.style.transform = "translateY(-100px)";
+    subtitleLearning1.style.opacity = 0;
+    subtitleLearning1.style.transform = "translateX(200px)";
 
-    subtitle2.style.opacity = 1;
-    subtitle2.style.transform = "translateY(0)";
+    subtitleLearning2.style.opacity = 1;
+    subtitleLearning2.style.transform = "translateX(0)";
 
-    description1.style.opacity = 0;
-    description2.style.transform = "translateY(0)";
+    descriptionLearning1.style.opacity = 0;
+    descriptionLearning2.style.transform = "translateX(0)";
 
-    description2.style.opacity = 1;
-    description1.style.transform = "translateY(-100px)";
+    descriptionLearning2.style.opacity = 1;
+    descriptionLearning1.style.transform = "translateX(200px)";
 
   } else if(
-    document.documentElement.scrollTop > (screen1.getBoundingClientRect().bottom + 800)
+    document.documentElement.scrollTop > (screenLearning1.getBoundingClientRect().bottom + 800)
   ) {
-    subtitle1.style.opacity = 1;
-    subtitle1.style.transform = "translateY(0)";
+    subtitleLearning1.style.opacity = 1;
+    subtitleLearning1.style.transform = "translateX(0)";
 
-    subtitle2.style.opacity = 0;
-    subtitle2.style.transform = "translateY(100px)";
+    subtitleLearning2.style.opacity = 0;
+    subtitleLearning2.style.transform = "translateX(-200px)";
 
-    description1.style.opacity = 1;
-    description1.style.transform = "translateY(0)";
+    descriptionLearning1.style.opacity = 1;
+    descriptionLearning1.style.transform = "translateX(0)";
 
 
-    description2.style.opacity = 0;
-    description2.style.transform = "translateY(100px)";
+    descriptionLearning2.style.opacity = 0;
+    descriptionLearning2.style.transform = "translateX(-200px)";
   }
 
 
-  console.log(screen1.getBoundingClientRect().top, document.documentElement.scrollTop);
+
+
+
+  let processTitleMain = document.querySelector(".process_steps__title__main");
+  let processSubtitle = document.querySelector(".process_steps__subtitle");
+
+
+
+  if (
+    document.documentElement.scrollTop > processCoords
+  ) {
+    processTitleMain.classList.add("process_steps__title__main_scroll");
+    processSubtitle.classList.add("process_steps__subtitle_scroll");
+  } else {
+    processTitleMain.classList.remove("process_steps__title__main_scroll");
+    processSubtitle.classList.remove("process_steps__subtitle_scroll");
+  }
 
 
 }

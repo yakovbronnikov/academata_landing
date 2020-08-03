@@ -36,7 +36,7 @@
           <span>Ваш e-mail</span>
         </div>
         <div class="pay_form__buttons">
-          <input type="submit" class="blue_button">
+          <input type="submit" value="Отправить"class="blue_button">
           <label for="free_form">Бесплатное обучение</label>
         </div>
       </div>
@@ -68,8 +68,8 @@
         </div>
         <div class="free_form__buttons">
           <input type="file" id="free_form__file">
-          <label for="free_form__file">Загрузить резюме</label>
-          <input type="submit" class="blue_button">
+          <label for="free_form__file"><strong>Загрузить резюме</strong></label>
+          <input type="submit" value="Отправить" class="blue_button">
         </div>
       </div>
       <label for="free_form_close" class="form_close"> </label>
@@ -220,7 +220,7 @@
             <h5 class="learning__title__description1">желающих стать профессиональными интернет-журналистами и блоггерами</h5>
             <h5 class="learning__title__description2">журналистов и копирайтеров желающих познать секреты интернет-журналистики и блоггерства</h5>
           </div>
-          <div class="learning_screen__button"></div>
+          <label for="pay_form" class="learning_screen__button"></label>
         </div>
     <div class="learning_screen learning_screen1">
         <div class="learning_screen__img"></div>
@@ -300,13 +300,13 @@
 
   <div class="process_steps">
     <div class="process_steps__title">
-      <h1 class="title_animate">Как попасть на обучение?</h1>
-      <h4 class="title_animate">В Академату попасть не просто, но и не сложно, если Вы хорошо владеете письменным русским языком и Вам нравится развиваться и познавать новую информацию.</h4>
+      <h1 class="process_steps__title__main">Как попасть на обучение?</h1>
+      <h4 class="process_steps__subtitle">В Академату попасть не просто, но и не сложно, если Вы хорошо владеете письменным русским языком и Вам нравится развиваться и познавать новую информацию.</h4>
     </div>
 
     <div class="process_steps__screen process_screen_animate">
       <div class="process_steps__screen__content">
-        <h3>Достаточно отправить нам заявку</h3>
+        <h4>Достаточно отправить нам заявку</h4>
         <p>с кратким резюме о себе, в ответ Вам придёт письмо на тестирование.</p>
         <div class="process_steps__screen__content__line"></div>
       </div>
@@ -316,7 +316,7 @@
     </div>
     <div class="process_steps__screen process_screen_animate">
       <div class="process_steps__screen__content">
-        <h3>Вас пригласят на собеседование</h3>
+        <h4>Вас пригласят на собеседование</h4>
         <p>и предложат бесплатный или платный вариант сотрудничества с Академией, по итогам пройденного испытания.</p>
         <div class="process_steps__screen__content__line"></div>
       </div>
@@ -326,7 +326,7 @@
     </div>
     <div class="process_steps__screen process_screen_animate">
       <div class="process_steps__screen__content">
-        <h3>Академия отдает предпочтение бесплатному варианту сотрудничества</h3>
+        <h4>Академия отдает предпочтение бесплатному варианту сотрудничества</h4>
         <p>но далеко не все претенденты сразу обладают необходимыми для этого навыками и знаниями.</p>
         <div class="process_steps__screen__content__line"></div>
       </div>
@@ -336,7 +336,7 @@
     </div>
     <div class="process_steps__screen process_screen_animate">
       <div class="process_steps__screen__content">
-        <h3>После согласования программы обучения</h3>
+        <h4>После согласования программы обучения</h4>
         <p>мы предоставим Вам доступ к уникальному функционалу сервиса, помогающему развивать навыки в разы быстрее привычных образовательных методов: с помощью уникальных наработок в интернет-журналистике и искусственного интеллекта, внедренного в систему. </p>
         <div class="process_steps__screen__content__line"></div>
       </div>
@@ -356,7 +356,7 @@
       <p>По окончанию курса Вы станете мастером в интернет-журналистике и блоггерстве. Упорные студенты Академии добиваются выдающихся результатов и имеют очень высокие доходы в медиаиндустрии.</p>
       <div class="beginning__txt__line"></div>
     </div>
-    <div class="blue_button">Начать обучение</div>
+    <label for="pay_form" class="blue_button">Начать обучение</label>
   </div>
 
   <div class="reviews" id="reviews">
@@ -443,6 +443,12 @@
     <div class="travel__txt">
       <p>По итогам обучения мы выбираем лучших интернет-журналистов, которые смогут отправиться в корпоративное путешествие за счет Академии и ее партнёров. Все фотографии в этом коллаже собраны с наших реальных путешествий, проведенных за последние годы.</p>
       <div class="beginning__txt__line"></div>
+    </div>
+    <div class="travel__gallery">
+      <div class="travel__gallery__img title_animate"></div>
+      <div class="travel__gallery__img title_animate"></div>
+      <div class="travel__gallery__img title_animate"></div>
+      <div class="travel__gallery__img title_animate"></div>
     </div>
   </div>
 
@@ -544,6 +550,14 @@
           settings: {
             centerMode: true,
             centerPadding: '5vw',
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            centerMode: true,
+            centerPadding: '0',
             arrows: false
           }
         }

@@ -55,6 +55,7 @@ body {
   padding: 20px 50px;
   background: #0066E0;
   transition: .4s;
+  cursor: pointer;
 }
 
 .blue_button:hover {
@@ -466,10 +467,15 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow: hidden;
 }
 
 .learning__title__main {
   font-size: 96px;
+}
+
+.learning__title__main__scroll {
+  font-size: 48px;
 }
 
 
@@ -484,34 +490,35 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: .3s;
+  transition: transform .6s, opacity .2s;
 }
 
 .learning__subtitle1 {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateX(-200px);
 }
 
 
 .learning__subtitle2 {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateX(-200px);
 }
+
 
 .learning__title__description h5 {
   position: absolute;
   top: 0;
   left: 0;
-  transition: .3s;
+  transition: transform .6s, opacity .2s;
 }
 
 .learning__title__description1, .learning__title__description2 {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateX(-200px);
 }
 
 .learning__title__description2 {
-  transform: translateY(100px);
+  transform: translateX(-200px);
 }
 
 
@@ -536,6 +543,7 @@ body {
   z-index: 1;
   padding: 100px 0 30px;
   transition: .4s;
+  overflow: hidden;
 }
 
 .learning_screen__title h4{
@@ -675,7 +683,7 @@ body {
 
 .process_steps__title {
   width: 100%;
-  padding: 70px 10vw 20px;
+  padding: 50px 10vw 10px;
   align-items: center;
   background: #fff;
   position: sticky;
@@ -687,6 +695,25 @@ body {
   margin-top: 30px;
   width: 60vw;
   font-weight: 500;
+  transition: .6s;
+  transform-origin: left;
+}
+
+.process_steps__title__main {
+  transform-origin: left;
+  transition: .6s;
+}
+
+
+
+.process_steps__title__main_scroll {
+  font-size: 60px;
+  opacity: .4;
+}
+
+.process_steps__subtitle_scroll  {
+  transform: scale(.8);
+  opacity: .2;
 }
 
 
@@ -696,7 +723,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
   width: 100%;
-  height: 40vh;
+  height: 400px;
   position: relative;
   margin: 600px 0;
   padding: 0 10vw;
@@ -704,23 +731,23 @@ body {
 
 .process_steps__screen__content {
   color: #000;
+  align-self: end;
 }
 
 
-.process_steps__screen__content  h3 {
-  max-width: 600px;
+.process_steps__screen__content  h4 {
+  max-width: 400px;
 }
 
 .process_steps__screen__content p {
   max-width: 400px;
   margin: 20px 0 30px;
-  font-weight: 500;
   line-height: 1.5;
 }
 
 .process_steps__screen__content div {
   width: 100px;
-  height: 2px;
+  height: 1px;
   background: #000;
 }
 
@@ -743,21 +770,25 @@ body {
 .process_steps .process_steps__screen:nth-child(2) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img1.jpg);
   background-size: cover;
+  background-position: center bottom;
 }
 
 .process_steps .process_steps__screen:nth-child(3) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img2.jpg);
   background-size: cover;
+  background-position: right bottom;
 }
 
 .process_steps .process_steps__screen:nth-child(4) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img3.jpg);
   background-size: cover;
+  background-position: center bottom;
 }
 
 .process_steps .process_steps__screen:nth-child(5) .process_steps__screen__img {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img4.jpg);
   background-size: cover;
+  background-position: center bottom;
 }
 
 
@@ -963,9 +994,11 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
   color: #fff;
   background: linear-gradient(90deg, rgba(0, 31, 67, 0.77) 0%, rgba(0, 97, 214, 0.5) 100%), url(img/travel_img.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 20vh 10vw 10vh;
   overflow: hidden;
 }
@@ -974,10 +1007,46 @@ body {
   grid-column: 1/3;
 }
 
-.beginning__title h3{
-  margin-top: 30px;
-  width: 80%;
+.travel__gallery {
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
 }
+
+.travel__gallery__img {
+  width: 100%;
+  height: 100%;
+  background: url(img/travel/travel_img1.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.travel__gallery__img:nth-child(2) {
+  background: url(img/travel/travel_img2.jpg);
+  background-size: cover;
+  grid-column: 2/4;
+  background-position: right center;
+}
+
+.travel__gallery__img:nth-child(3) {
+  background: url(img/travel/travel_img3.jpg);
+  background-size: cover;
+  background-position: right center;
+  grid-column: 1/3;
+}
+
+.travel__gallery__img:nth-child(4) {
+  background: url(img/travel/travel_img4.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
 
 .travel__txt {
   align-self: end;
@@ -986,11 +1055,19 @@ body {
   max-width: 500px;
 }
 
+
+
+
 .beginning__txt__line {
   margin-top: 20px;
   background: #fff;
   height: 2px;
   transition: 1s;
+}
+
+.beginning__title h3{
+  margin-top: 30px;
+  width: 80%;
 }
 
 
@@ -1257,25 +1334,25 @@ body {
 
 .process_screen_animate[data-scroll] .process_steps__screen__content__line {transition: .5s ;}
 
-.process_screen_animate[data-scroll="in"] .process_steps__screen__content__line {width: 288px;}
+.process_screen_animate[data-scroll="in"] .process_steps__screen__content__line {width: 400px;}
 
 .process_screen_animate[data-scroll="out"] .process_steps__screen__content__line {width: 100px;}
 
 
 
 .process_screen_animate[data-scroll] p,
-.process_screen_animate[data-scroll] h3{
+.process_screen_animate[data-scroll] h4{
   transition: .5s ;
 }
 
 
 .process_screen_animate[data-scroll="in"] p,
-.process_screen_animate[data-scroll="in"] h3{
+.process_screen_animate[data-scroll="in"] h4{
   transform: translateX(0);
 }
 
 .process_screen_animate[data-scroll="out"] p,
-.process_screen_animate[data-scroll="out"] h3{
+.process_screen_animate[data-scroll="out"] h4{
   transform: translateX(-50px);
 }
 
@@ -1560,6 +1637,7 @@ body {
   transition: .4s;
   border: 2px solid rgba(255,255,255,.1);
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .free_form__buttons label:hover {
