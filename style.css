@@ -595,6 +595,7 @@ body {
   top: 0;
   left: 0;
   transition: transform .6s 0s, opacity .2s;
+  background: #fff;
 }
 
 .learning__subtitle1 {
@@ -614,6 +615,7 @@ body {
   top: 0;
   left: 0;
   transition: transform .6s 0s, opacity .2s;
+  background: #fff;
 }
 
 .learning__title__description1, .learning__title__description2 {
