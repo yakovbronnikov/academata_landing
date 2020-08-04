@@ -226,14 +226,14 @@
   }
 
   .main_banner__img {
-    height: 380px;
+    height: 40vh;
     right: 0;
     left: auto;
-    bottom: 0;
+    bottom: 200px;
   }
 
   .main_banner .blue_button {
-    margin-top: 80px;
+    margin-top: 200px;
   }
 
   .main_banner__title {
@@ -501,30 +501,57 @@
 
   .header {
     height: 50px;
+    padding: 0 20px;
   }
 
   .header__logo {
     height: 30px;
   }
 
+  .header .blue_button{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    color: #fff;
+    background: #0066E0;
+    border: none;
+  }
+
+
+
+
+
   .main_banner {
     padding: 0 20px;
   }
 
   .main_banner__img {
-    height: 380px;
+    height: 41vh;
     right: 0;
     left: auto;
-    bottom: 0;
+    bottom: 90px;
   }
 
   .main_banner .blue_button {
-    margin-top: 80px;
+    margin-top: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     width: auto;
+    height: 50px;
   }
 
   .main_banner__title {
-    padding-bottom: 0;
+    padding-bottom: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+
+  .main_banner__title h1 {
+    font-size: 26px;
+    line-height: 1.3;
   }
 
 
@@ -593,11 +620,11 @@
 
 
 
-
   .learning__title {padding: 30px 20px 0;}
   .learning__title__main {font-size: 36px;}
   .learning__title__main__scroll {font-size: 28px;}
   .learning__title__description {height: 80px;}
+  .learning__subtitle {height: 40px;}
 
 
   .learning_screen {padding: 0 20px;}
@@ -605,6 +632,9 @@
   .learning_screen__button {
     width: 50px;
     height: 50px;
+    bottom: auto;
+    right: 20px;
+    top: 30px;
   }
 
   .learning_screen__txt__blok {width: auto;}
@@ -643,7 +673,7 @@
   .title6[data-scroll="in"],
   .title7[data-scroll="in"] {
     opacity: 1;
-    transform: translateX(20px);
+    transform: translateX(14px);
   }
 
   .our_pluses__end {height: 150px;}
@@ -653,23 +683,33 @@
 
   .process_steps__title {
     padding: 50px 20px 10px;
+    position: relative;
   }
 
   .process_steps__title__main_scroll {
     font-size: 18px;
   }
 
+  .process_steps__title h4 {width: auto;}
+
 
   .process_steps__screen {
     grid-template-columns: 1fr;
     height: auto;
     grid-row-gap: 50px;
-    margin: 300px 0;
+    margin: 150px 0;
+    padding: 0 20px;
+  }
+
+  .process_steps__screen__content {
+    overflow: hidden;
   }
 
   .process_steps__screen__img {
-    height: 300px;
+    height: 150px;
   }
+
+  .process_steps__screen__number {font-size: 50px;}
 
 
 
@@ -677,12 +717,25 @@
 
 
   .beginning {
+    padding: 20vh 20px 30px;
     grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+    height: auto;
+    min-height: 100vh;
+    background-position: center top;
+  }
+
+  .beginning__title h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: auto;
   }
 
   .beginning .blue_button {
     grid-column: 1/2;
     justify-self: start;
+    width: 100%;
   }
 
 
@@ -692,8 +745,24 @@
   .reviews_slider__card {padding: 0 20px;}
 
 
+
+
+
+  .travel {
+    height: auto;
+    padding: 100px 20px;
+    grid-row-gap: 30px;
+  }
+
+  .travel__title h3{font-size: 16px; margin-top: 10px;}
+
   .travel__txt {grid-column: 1/3;}
 
+  .travel__gallery {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    height: 200px;
+  }
 
 
 
@@ -702,6 +771,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
+    height: auto;
+    padding: 0 20px;
   }
 
 
@@ -712,13 +783,22 @@
   }
 
   .teachers__avatar {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
   }
 
   .teachers__info {
-    margin: 20px;
+    margin: 0 20px 0;
     width: auto;
+  }
+
+  .teachers__title {
+    padding: 100px 20px 0;
+  }
+
+  .teachers__title h3 {
+    width: auto;
+    font-size: 16px;
   }
 
 
@@ -727,30 +807,83 @@
   .help_form {
     height: auto;
     grid-template-columns: 1fr;
+    padding: 50px 20px;
   }
 
 
   .help_form__title {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
+
+  .help_form__title h3 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .help_form__inputs {grid-row-gap: 16px}
 
   .help_form .blue_button {
     grid-column: 1/2;
     justify-self: start;
-    margin-top: 100px;
+    margin-top: 40px;
+    width: 100%;
   }
 
 
+  .pay_form__window {
+    top: 30px;
+    bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .pay_form__title h3, .free_form__title h3 {font-size: 16px;}
+
+  .pay_form__inputs {grid-row-gap: 30px}
+
+  .pay_form__buttons {flex-direction: column;}
+
+  .pay_form__buttons .blue_button,
+  .free_form__buttons .blue_button {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .pay_form__buttons label {height: auto;}
+
+
+
+
+
+  .free_form {height: 130vh;}
 
 
   .free_form__buttons {
-    grid-column: 1/2;
+    grid-column: 1/3;
     justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .free_form__buttons label {
+    margin-right: 0;
+    margin-bottom: 10px;
+    justify-content: center;
   }
 
   .free_form__inputs {
     grid-template-columns: 1fr;
   }
+
+  .free_form__window {
+    top: 30px;
+    bottom: auto;
+    height: 90vh;
+    padding: 0 20px;
+    overflow: scroll;
+  }
+
+
+
 
 
   .form_input span {
@@ -760,6 +893,8 @@
   .form_input__field {
     font-size: 22px;
   }
+
+  .form_close {height: 30px; width: 30px; opacity: .8;}
 
 
 

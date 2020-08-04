@@ -530,7 +530,7 @@ body {
   position: relative;
   width: 100vw;
   padding: 0 10vw;
-  /* grid-row-gap: 100px; */
+  overflow: hidden;
   display: grid;
   transition: .6s;
 }
@@ -563,6 +563,7 @@ body {
   display: grid;
   grid-row-gap: 12px;
   width: 340px;
+  overflow: hidden;
 }
 
 .learning_screen__txt__blok h4 {
@@ -642,6 +643,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow: hidden;
 }
 
 .our_pluses__content {
@@ -696,23 +698,22 @@ body {
   width: 60vw;
   font-weight: 500;
   transition: .6s;
-  transform-origin: left;
+  transform-origin: left top;
 }
 
 .process_steps__title__main {
-  transform-origin: left;
   transition: .6s;
 }
 
 
 
 .process_steps__title__main_scroll {
-  font-size: 60px;
+  font-size: 50px;
   opacity: .4;
 }
 
 .process_steps__subtitle_scroll  {
-  transform: scale(.8);
+  transform: scale(.7);
   opacity: .2;
 }
 
@@ -1063,11 +1064,6 @@ body {
   background: #fff;
   height: 2px;
   transition: 1s;
-}
-
-.beginning__title h3{
-  margin-top: 30px;
-  width: 80%;
 }
 
 
