@@ -167,10 +167,10 @@ function scrollFunction() {
     learningMain.classList.add("learning__title__main__scroll");
   } else {
     subtitleLearning1.style.opacity = 0;
-    subtitleLearning1.style.transform = "translateX(-200px)";
+    subtitleLearning1.style.transform = "translateX(-400px)";
 
     descriptionLearning1.style.opacity = 0;
-    descriptionLearning1.style.transform = "translateX(-200px)";
+    descriptionLearning1.style.transform = "translateX(-400px)";
 
     learningButton.style.opacity = 0;
 
@@ -181,7 +181,7 @@ function scrollFunction() {
     document.documentElement.scrollTop > (screenLearning2.getBoundingClientRect().bottom + 800)
   ) {
     subtitleLearning1.style.opacity = 0;
-    subtitleLearning1.style.transform = "translateX(200px)";
+    subtitleLearning1.style.transform = "translateX(400px)";
 
     subtitleLearning2.style.opacity = 1;
     subtitleLearning2.style.transform = "translateX(0)";
@@ -190,7 +190,7 @@ function scrollFunction() {
     descriptionLearning2.style.transform = "translateX(0)";
 
     descriptionLearning2.style.opacity = 1;
-    descriptionLearning1.style.transform = "translateX(200px)";
+    descriptionLearning1.style.transform = "translateX(400px)";
 
   } else if(
     document.documentElement.scrollTop > (screenLearning1.getBoundingClientRect().bottom + 800)
@@ -199,14 +199,14 @@ function scrollFunction() {
     subtitleLearning1.style.transform = "translateX(0)";
 
     subtitleLearning2.style.opacity = 0;
-    subtitleLearning2.style.transform = "translateX(-200px)";
+    subtitleLearning2.style.transform = "translateX(-400px)";
 
     descriptionLearning1.style.opacity = 1;
     descriptionLearning1.style.transform = "translateX(0)";
 
 
     descriptionLearning2.style.opacity = 0;
-    descriptionLearning2.style.transform = "translateX(-200px)";
+    descriptionLearning2.style.transform = "translateX(-400px)";
   }
 
 

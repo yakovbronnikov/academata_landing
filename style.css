@@ -490,18 +490,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform .6s, opacity .2s;
+  transition: transform .6s 0s, opacity .2s;
 }
 
 .learning__subtitle1 {
   opacity: 0;
-  transform: translateX(-200px);
+  transform: translateX(-400px);
 }
 
 
 .learning__subtitle2 {
   opacity: 0;
-  transform: translateX(-200px);
+  transform: translateX(-400px);
 }
 
 
@@ -509,16 +509,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform .6s, opacity .2s;
+  transition: transform .6s 0s, opacity .2s;
 }
 
 .learning__title__description1, .learning__title__description2 {
   opacity: 0;
-  transform: translateX(-200px);
-}
-
-.learning__title__description2 {
-  transform: translateX(-200px);
+  transform: translateX(-400px);
 }
 
 
