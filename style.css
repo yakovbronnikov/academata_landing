@@ -80,13 +80,13 @@ body {
   justify-content: space-between;
   transition: .4s;
   opacity: 0;
-  animation: header .6s ease-in-out .3s normal forwards;
+  animation: header .6s ease-in-out .4s normal forwards;
 }
 
 
 @keyframes header {
-  0% {transform: translateY(-100px); opacity: 0;}
-  100% {transform: translateY(0); opacity: 1;}
+  0% {transform: translateY(-100px); opacity: 0; z-index: 106;}
+  100% {transform: translateY(0); opacity: 1; z-index: 106;}
 }
 
 .header .blue_button {
@@ -171,67 +171,58 @@ body {
 
 #drawer {display: none;}
 
-#drawer:checked ~ .drawer_label .drawer_button:before {
+#drawer:checked ~ .header .drawer_label .drawer_button:before {
   transform: rotate(45deg);
   top: 6px;
   transition: transform .4s .2s, top .2s  ;
 }
 
-#drawer:checked ~ .drawer_label .drawer_button:after {
+#drawer:checked ~ .header .drawer_label .drawer_button:after {
   transform: rotate(-45deg);
   bottom: 6px;
   transition: transform .4s .2s, bottom .2s ;
 }
 
 
-#drawer:checked ~ .header__nav {
+#drawer:checked ~ .drawer__nav {
   animation: pay_form 1.2s ease-in-out forwards;
 }
 
-#drawer:not(:checked) ~ .header__nav {
+#drawer:not(:checked) ~ .drawer__nav {
   animation: pay_form__close 1.2s ease-in-out forwards;
 }
 
 
-#drawer:checked ~ .header__nav .header__nav__bg div{
+#drawer:checked ~ .drawer__nav .drawer__nav__bg div{
   animation: pay_form__bg 1.2s ease-in-out forwards;
 }
 
 
-#drawer:not(:checked) ~ .header__nav .header__nav__bg div{
+#drawer:not(:checked) ~ .drawer__nav .drawer__nav__bg div{
+
   animation: pay_form__bg__close 1.2s ease-in-out forwards;
 }
 
-#drawer:checked ~ .header__nav a{
+#drawer:checked ~ .drawer__nav a{
   color: #000;
   animation: pay_form__window 1.2s ease-in-out forwards;
 }
 
-#drawer:not(:checked) ~ .header__nav a{
+#drawer:not(:checked) ~ .drawer__nav a{
   color: #000;
   animation: pay_form__window__close 1.2s ease-in-out forwards;
 }
 
+#drawer:checked ~ .header{
+  z-index: 103;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  position: fixed;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#drawer:checked ~ .header .blue_button {
+  display: block;
+}
 
 
 
@@ -251,6 +242,12 @@ body {
   background: linear-gradient(284.41deg, #147FFF 0%, #003C83 100%);
   color: #fff;
   overflow: hidden;
+  animation: banner 1.2s ease-in-out 0s normal;
+}
+
+@keyframes banner {
+  0% {z-index: 105;}
+  100% {z-index: 105;}
 }
 
 .main_banner__img {
