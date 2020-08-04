@@ -131,6 +131,113 @@ body {
 
 
 
+
+.drawer_label {
+  display: none;
+  position: relative;
+  z-index: 105;
+}
+
+.drawer_button {
+  position: relative;
+  width: 40px;
+  height: 14px;
+}
+
+.drawer_button:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: #0066E0;
+  box-shadow: 0 0 3px #fff;
+  transition: transform .4s, top .2s .4s;
+}
+
+.drawer_button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #0066E0;
+  box-shadow: 0 0 3px #fff;
+  transition: transform .4s, bottom .2s .4s;
+}
+
+
+#drawer {display: none;}
+
+#drawer:checked ~ .drawer_label .drawer_button:before {
+  transform: rotate(45deg);
+  top: 6px;
+  transition: transform .4s .2s, top .2s  ;
+}
+
+#drawer:checked ~ .drawer_label .drawer_button:after {
+  transform: rotate(-45deg);
+  bottom: 6px;
+  transition: transform .4s .2s, bottom .2s ;
+}
+
+
+#drawer:checked ~ .header__nav {
+  animation: pay_form 1.2s ease-in-out forwards;
+}
+
+#drawer:not(:checked) ~ .header__nav {
+  animation: pay_form__close 1.2s ease-in-out forwards;
+}
+
+
+#drawer:checked ~ .header__nav .header__nav__bg div{
+  animation: pay_form__bg 1.2s ease-in-out forwards;
+}
+
+
+#drawer:not(:checked) ~ .header__nav .header__nav__bg div{
+  animation: pay_form__bg__close 1.2s ease-in-out forwards;
+}
+
+#drawer:checked ~ .header__nav a{
+  color: #000;
+  animation: pay_form__window 1.2s ease-in-out forwards;
+}
+
+#drawer:not(:checked) ~ .header__nav a{
+  color: #000;
+  animation: pay_form__window__close 1.2s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main_banner {
   position: relative;
   width: 100vw;
@@ -516,6 +623,7 @@ body {
   opacity: 0;
   transform: translateX(-400px);
 }
+
 
 
 
@@ -1831,6 +1939,6 @@ body {
 
 
 
-#pay_form_close, #free_form_close, #pay_form, #free_form, #free_form__file {
+#pay_form_close, #free_form_close, #pay_form, #free_form, #free_form__file, #drawer {
   display: none;
 }
