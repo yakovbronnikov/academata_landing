@@ -54,40 +54,6 @@ function onChangeForm({ name, value }) {
 
 
 
-// function scrollTitleFunction() {
-//   const learningTitle1 = document.querySelector(".learning_screen__title1");
-//   const learningTitle2 = document.querySelector(".learning_screen__title2");
-//   let learningButton1 = learningTitle1.querySelector(
-//     ".learning_screen__button"
-//   );
-//   let learningButton2 = learningTitle2.querySelector(
-//     ".learning_screen__button"
-//   );
-//
-//   if (
-//     document.body.scrollTop == learningTitle1.getBoundingClientRect().top ||
-//     document.documentElement.scrollTop ==
-//       learningTitle1.getBoundingClientRect().top
-//   ) {
-//     learningTitle1.style.background = "#fff";
-//     learningButton1.style.opacity = "1";
-//   } else {
-//     learningTitle1.style.background = "none";
-//     learningButton1.style.opacity = "0";
-//   }
-//
-//   if (
-//     document.body.scrollTop == learningTitle2.getBoundingClientRect().top ||
-//     document.documentElement.scrollTop ==
-//       learningTitle2.getBoundingClientRect().top
-//   ) {
-//     learningTitle2.style.background = "#fff";
-//     learningButton2.style.opacity = "1";
-//   } else {
-//     learningTitle2.style.background = "none";
-//     learningButton2.style.opacity = "0";
-//   }
-// }
 
 
 
@@ -95,142 +61,43 @@ function onChangeForm({ name, value }) {
 
 
 
-let process = document.querySelector(".process_steps");
-const processCoords = process.getBoundingClientRect().top;
 
 
 
+function scrollFunction()  {
 
-function scrollFunction() {
-  const header = document.querySelector(".header");
-  let navBar = header.querySelectorAll("a");
-  let blueButton = header.querySelector(".blue_button");
-  const ourPluses = document.querySelector(".our_pluses");
+  const processTitle = document.querySelector('.process_steps__title');
+  const processCoords = processTitle.getBoundingClientRect().top;
 
-  if (
-    document.body.scrollTop > ourPluses.getBoundingClientRect().bottom ||
-    document.documentElement.scrollTop > ourPluses.getBoundingClientRect().bottom
-  ) {
+  const plusesTitle = document.querySelector('.our_pluses__title');
 
-    blueButton.style.display = "block";
+  const beginningCoords = document.querySelector('.beginning').getBoundingClientRect().top;
 
-    header.style.position = "fixed";
-    header.style.background = "#fff";
-    header.style.boxShadow = "0 4px 20px rgba(0,0,0,.15)";
+  const techersTitle = document.querySelector('.teachers__title');
 
-    navBar.forEach((element) => {
-      element.style.color = "#000";
-    });
+  const helpForm = document.querySelector('.help_form').getBoundingClientRect().top;
 
+
+  if (processCoords <= 0) {
+    plusesTitle.style.position = 'static';
   } else {
-
-    blueButton.style.display = "none";
-
-    header.style.position = "absolute";
-    header.style.background = "none";
-    header.style.boxShadow = "none";
-
-    navBar.forEach((element) => {
-      element.style.color = "#fff";
-    });
-
+    plusesTitle.style.position = 'sticky';
   }
 
 
-
-  const subtitleLearning1 = document.querySelector(".learning__subtitle1");
-  const subtitleLearning2 = document.querySelector(".learning__subtitle2");
-
-  const descriptionLearning1 = document.querySelector(".learning__title__description1");
-  const descriptionLearning2 = document.querySelector(".learning__title__description2");
-
-  let screenLearning1 = document.querySelector(".learning_screen1");
-  let screenLearning2 = document.querySelector(".learning_screen2");
-
-  let learningButton = document.querySelector(".learning_screen__button");
-
-  let learningMain = document.querySelector(".learning__title__main");
-
-
-
-  if (
-    document.documentElement.scrollTop > screenLearning1.getBoundingClientRect().bottom
-  ) {
-    subtitleLearning1.style.opacity = 1;
-    subtitleLearning1.style.transform = "translateX(0px)";
-
-    descriptionLearning1.style.opacity = 1;
-    descriptionLearning1.style.transform = "translateX(0)";
-
-    learningButton.style.opacity = 1;
-
-    learningMain.classList.add("learning__title__main__scroll");
+  if (beginningCoords <= 0) {
+    processTitle.style.position = 'static';
   } else {
-    subtitleLearning1.style.opacity = 0;
-    subtitleLearning1.style.transform = "translateX(-400px)";
-
-    descriptionLearning1.style.opacity = 0;
-    descriptionLearning1.style.transform = "translateX(-400px)";
-
-    learningButton.style.opacity = 0;
-
-    learningMain.classList.remove("learning__title__main__scroll");
+    processTitle.style.position = 'sticky';
   }
 
-  if (
-    document.documentElement.scrollTop > (screenLearning2.getBoundingClientRect().bottom + 800)
-  ) {
-    subtitleLearning1.style.opacity = 0;
-    subtitleLearning1.style.transform = "translateX(400px)";
-
-    subtitleLearning2.style.opacity = 1;
-    subtitleLearning2.style.transform = "translateX(0)";
-
-    descriptionLearning1.style.opacity = 0;
-    descriptionLearning2.style.transform = "translateX(0)";
-
-    descriptionLearning2.style.opacity = 1;
-    descriptionLearning1.style.transform = "translateX(400px)";
-
-  } else if(
-    document.documentElement.scrollTop > (screenLearning1.getBoundingClientRect().bottom + 800)
-  ) {
-    subtitleLearning1.style.opacity = 1;
-    subtitleLearning1.style.transform = "translateX(0)";
-
-    subtitleLearning2.style.opacity = 0;
-    subtitleLearning2.style.transform = "translateX(-400px)";
-
-    descriptionLearning1.style.opacity = 1;
-    descriptionLearning1.style.transform = "translateX(0)";
-
-
-    descriptionLearning2.style.opacity = 0;
-    descriptionLearning2.style.transform = "translateX(-400px)";
-  }
-
-
-
-
-
-  let processTitleMain = document.querySelector(".process_steps__title__main");
-  let processSubtitle = document.querySelector(".process_steps__subtitle");
-
-
-
-  if (
-    document.documentElement.scrollTop > processCoords
-  ) {
-    processTitleMain.classList.add("process_steps__title__main_scroll");
-    processSubtitle.classList.add("process_steps__subtitle_scroll");
+  if (helpForm <= 0) {
+    techersTitle.style.position = 'static';
   } else {
-    processTitleMain.classList.remove("process_steps__title__main_scroll");
-    processSubtitle.classList.remove("process_steps__subtitle_scroll");
+    techersTitle.style.position = 'sticky';
   }
-
 
 }
-
 
 
 
@@ -276,7 +143,7 @@ ScrollOut({
 });
 
 ScrollOut({
-  targets: ".process_screen_animate",
+  targets: ".process_steps__title",
   threshold: 0.5,
 });
 

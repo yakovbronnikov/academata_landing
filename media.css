@@ -33,17 +33,8 @@
 
 
 
-  .our_pluses__content__title {
-    width: 1200px;
-  }
 
-  .process_steps__title {
-    padding: 80px 10vw 20px;
-  }
 
-  .process_steps__title__main_scroll {
-    font-size: 72px;
-  }
 
   .process_steps__screen__content  h4,
   .process_steps__screen__content  p {
@@ -108,7 +99,6 @@
     margin-bottom: 400px;
   }
 
-  .process_steps__title {padding-top: 100px;}
 
 }
 
@@ -153,17 +143,10 @@
   }
 
 
-  .our_pluses__content__item {
-    padding: 40px 10vw;
-  }
 
   .our_pluses__content__title  {
-    font-size: 30px;
-  }
-
-
-  .process_steps__title {
-    padding: 60px 10vw 20px;
+    font-size: 36px;
+    max-width: 80%;
   }
 
 
@@ -358,10 +341,6 @@
 
   }
 
-
-  .process_steps__title {padding-top: 80px;}
-  .process_steps__title__main_scroll {font-size: 48px;}
-  .process_steps__title h4 {width: auto;}
 
 
   .process_steps__screen__content  h4,
