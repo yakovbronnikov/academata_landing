@@ -338,7 +338,7 @@ body {
 
 .next img {
   width: 60px;
-  animation: next_img 3s ease-in-out 3s infinite;
+  animation: next_img 3s ease-in-out 1s infinite;
 }
 
 @keyframes next_img {
