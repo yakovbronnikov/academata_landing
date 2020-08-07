@@ -1,6 +1,4 @@
-// window.onscroll = function () {
-//   scrollFunction(), scrollTitleFunction();
-// };
+history.pushState('', document.title, window.location.pathname);
 
 window.onscroll = function () {
   scrollFunction();
@@ -10,12 +8,11 @@ window.addEventListener("mousemove", cursor);
 
 setTimeout(() => {
   window.scrollTo(0, 0);
-  addScrollAnimation();
 }, 0);
 
 const mouseCursor = document.querySelector(".cursor");
 let learningScreen = document.querySelectorAll(
-  ".learning_screen__button, .header__nav a, .form_close"
+  ".learning_screen__button, .header2 .header__nav a, .form_close"
 );
 
 function cursor(e) {
@@ -67,6 +64,8 @@ function onChangeForm({ name, value }) {
 function scrollFunction()  {
 
   const processTitle = document.querySelector('.process_steps__title');
+  const processSubtitle = document.querySelector('.process_steps__title h1');
+  const processDescription = document.querySelector('.process_steps__title h4');
   const processCoords = processTitle.getBoundingClientRect().top;
 
   const plusesTitle = document.querySelector('.our_pluses__title');
@@ -76,6 +75,8 @@ function scrollFunction()  {
   const techersTitle = document.querySelector('.teachers__title');
 
   const helpForm = document.querySelector('.help_form').getBoundingClientRect().top;
+
+  let boxes = document.querySelectorAll('#box1, #box2, #box3, #box4, #box5, #box6');
 
 
   if (processCoords <= 0) {
@@ -97,38 +98,48 @@ function scrollFunction()  {
     techersTitle.style.position = 'sticky';
   }
 
+
+
+  const promptWindow = document.querySelector('.scroll_prompt__window');
+
+  const nextImg = document.querySelector('.next img');
+  const prev = document.querySelector('.previous');
+
+  if (document.documentElement.scrollTop > 0){
+    promptWindow.classList.remove('scroll_prompt__window__banner');
+    nextImg.style.display = 'none';
+    prev.style.display = 'block';
+  } else {
+    promptWindow.classList.add('scroll_prompt__window__banner');
+    nextImg.style.display = 'block';
+    prev.style.display = 'none';
+  }
+
+  const processScreen = document.querySelector('#box14').getBoundingClientRect().top;
+
+  if (processScreen <= 0) {
+    processSubtitle.style.opacity = 0.2;
+    processDescription.style.opacity = 0.2;
+  } else if(processCoords <= 0){
+    processSubtitle.style.opacity = 1;
+    processDescription.style.opacity = 1;
+  }
+
+  const teachersTitle = document.querySelector('.teachers__title');
+  const teachersSubtitle = document.querySelector('.teachers__title h1');
+  const teachersDescription = document.querySelector('.teachers__title h3');
+  const teachersCard = document.querySelector('#box22').getBoundingClientRect().top;
+
+  if (teachersCard <= 0) {
+    teachersSubtitle.style.opacity = 0.2;
+    teachersDescription.style.opacity = 0.2;
+  } else if(teachersCard <= 0){
+    teachersSubtitle.style.opacity = 1;
+    teachersDescription.style.opacity = 1;
+  }
+
+
 }
-
-
-
-
-
-
-
-
-
-const addScrollAnimation = () => {
-  const titles = [
-    ".title1",
-    ".title2",
-    ".title3",
-    ".title4",
-    ".title5",
-    ".title6",
-    ".title7",
-  ];
-
-  const mainTitle = document.querySelector(".our_pluses__title");
-
-  titles.forEach((title) => {
-    const offset = document.querySelector(title);
-
-    ScrollOut({
-      targets: title,
-      offset: offset.getBoundingClientRect().top - mainTitle.offsetHeight,
-    });
-  });
-};
 
 
 

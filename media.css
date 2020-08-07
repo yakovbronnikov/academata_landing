@@ -7,9 +7,18 @@
   h4 {font-size: 36px;}
   h5 {font-size: 24px;}
 
-  .header {
+  .scroll_prompt__button  {width: 80px; height: 80px;}
+  .scroll_prompt__window {bottom: 100px;}
+
+  .header, .header2 {
     height: 100px;
   }
+
+  .header__logo {
+    height: 60px;
+  }
+
+  .previous {top: 100px;}
 
   .main_banner__img {
     height: 65vh;
@@ -18,24 +27,15 @@
   }
 
 
-  .learning__title__description {
-    margin-top: 30px;
-    height: 100px;
-  }
-
-  .learning_screen__title {
-    padding: 200px 0 50px;
-  }
-
-  .learning__title__main__scroll {
-    font-size: 60px;
-  }
+  .our_pluses__title {padding-top: 200px;}
+  .our_pluses__content__title {max-width: 70%}
 
 
 
 
 
 
+  .process_steps__title {padding-top: 200px;}
   .process_steps__screen__content  h4,
   .process_steps__screen__content  p {
     max-width: 500px;
@@ -55,6 +55,8 @@
   .reviews h1 {
     padding: 0 10vw 200px;
   }
+
+  .teachers__title {padding-top: 200px;}
 
 }
 
@@ -88,15 +90,6 @@
     right: 0;
     left: auto;
     bottom: 150px;
-  }
-
-
-  .learning_screen__title h4{
-    width: 860px;
-  }
-
-  .learning_screen__txt {
-    margin-bottom: 400px;
   }
 
 
