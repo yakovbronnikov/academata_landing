@@ -66,13 +66,32 @@ body {
   background: #fff;
 }
 
-.scroll_prompt__button:hover {opacity: 1;}
+.scroll_up__button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url(img/up.png);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  bottom: 3vw;
+  left: 3vw;
+  z-index: 100;
+  opacity: .1;
+  transition: .4s;
+  box-shadow: 0 0 30px rgba(0,117,224,.4);
+  display: none;
+}
+
+.scroll_prompt__button:hover, .scroll_up__button:hover {opacity: 1;}
 
 .scroll_prompt__button:hover ~ .scroll_prompt__window,
 .scroll_prompt__window__banner {
   opacity: .9;
   transform: rotateY(0);
 }
+
+
 
 
 

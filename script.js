@@ -104,15 +104,18 @@ function scrollFunction()  {
 
   const nextImg = document.querySelector('.next img');
   const prev = document.querySelector('.previous');
+  const up = document.querySelector('.scroll_up__button');
 
   if (document.documentElement.scrollTop > 0){
     promptWindow.classList.remove('scroll_prompt__window__banner');
     nextImg.style.display = 'none';
     prev.style.display = 'block';
+    up.style.display = 'block';
   } else {
     promptWindow.classList.add('scroll_prompt__window__banner');
     nextImg.style.display = 'block';
     prev.style.display = 'none';
+    up.style.display = 'none';
   }
 
   const processScreen = document.querySelector('#box14').getBoundingClientRect().top;
