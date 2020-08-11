@@ -1,4 +1,13 @@
+smoothscroll.polyfill();
+
+
+
+
+
 history.pushState('', document.title, window.location.pathname);
+
+
+
 
 window.onscroll = function () {
   scrollFunction();

@@ -663,25 +663,24 @@ body {
   padding: 0 10vw;
   color: #fff;
   width: 100%;
-  height: 300px;
+  height: 250px;
   padding-top: 150px;
   background: #1C1C1C;
   position: sticky;
   top: 0;
   z-index: 1;
   overflow: hidden;
-  transition: .2s;
+  transition: .8s;
 }
 
 
 .our_pluses__content__item {
   position: relative;
   font-weight: 700;
-  padding: 0 10vw;
+  padding: 50px 10vw;
   background: #1C1C1C;
   height: auto;
-  transition: .6s;
-  padding-top: 40vh;
+  transition: .8s;
 }
 
 .our_pluses__content__item div {
@@ -690,23 +689,32 @@ body {
   background: #fff;
   margin-top: 20px;
   opacity: 0.2;
-  transition: .6s;
+  transition: .8s;
 }
 
-.our_pluses__content__item h3 {transition: .6s; color: rgba(255,255,255, .2);}
+.our_pluses__content__item h3 {
+  transition: transform .6s;
+  color: rgba(255,255,255, .2);
+  display: flex;
+  align-items: flex-end;
+}
+
+#box5 h3 {
+  height: 42vh;
+}
 
 .our_pluses__end {padding-bottom: 20vh;}
 
 
 .our_pluses__content__item:target {
   z-index: 0;
-  transform: translateY(0);
 }
 
 
 .our_pluses__content__item:target h3{
   transform: translateX(50px);
   color: rgba(255,255,255, 1);
+  height: 42vh;
 }
 
 
@@ -778,6 +786,7 @@ body {
   width: 100px;
   height: 1px;
   background: #000;
+  transition: .6s .3s;
 }
 
 
@@ -818,6 +827,10 @@ body {
   background: linear-gradient(0deg, rgba(0, 95, 182, 0.6), rgba(0, 95, 182, 0.6)), url(img/process_img4.jpg);
   background-size: cover;
   background-position: center bottom;
+}
+
+.process_steps__screen:target .process_steps__screen__content div{
+  width: 400px;
 }
 
 
