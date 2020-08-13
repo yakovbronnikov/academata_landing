@@ -1,4 +1,3 @@
-smoothscroll.polyfill();
 
 
 
@@ -101,11 +100,11 @@ function scrollFunction()  {
     processTitle.style.position = 'sticky';
   }
 
-  if (helpForm <= 0) {
-    techersTitle.style.position = 'static';
-  } else {
-    techersTitle.style.position = 'sticky';
-  }
+  // if (helpForm <= 0) {
+  //   techersTitle.style.position = 'static';
+  // } else {
+  //   techersTitle.style.position = 'sticky';
+  // }
 
 
 
@@ -192,4 +191,10 @@ ScrollOut({
 ScrollOut({
   targets: ".teachers__card",
   threshold: 0.2,
+});
+
+
+ScrollOut({
+  targets: ".card_animate",
+  threshold: 0.5
 });
