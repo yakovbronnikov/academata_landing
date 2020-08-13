@@ -1,8 +1,3 @@
-
-
-
-
-
 history.pushState('', document.title, window.location.pathname);
 
 
@@ -12,31 +7,13 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-window.addEventListener("mousemove", cursor);
+
 
 setTimeout(() => {
   window.scrollTo(0, 0);
 }, 0);
 
-const mouseCursor = document.querySelector(".cursor");
-let learningScreen = document.querySelectorAll(
-  ".learning_screen__button, .header2 .header__nav a, .form_close"
-);
 
-function cursor(e) {
-  mouseCursor.style.top = e.pageY + "px";
-  mouseCursor.style.left = e.pageX + "px";
-}
-
-learningScreen.forEach((screen) => {
-  screen.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("cursor_learn");
-  });
-
-  screen.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("cursor_learn");
-  });
-});
 
 function onChangeForm({ name, value }) {
   const inputs = document.querySelectorAll(".form_input__field");

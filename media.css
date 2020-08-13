@@ -30,17 +30,7 @@
   .our_pluses__title {padding-top: 200px; padding-bottom: 30px; height: auto;}
   .our_pluses__content__title {max-width: 70%}
 
-  .levels {
-    padding-top: 400px;
-  }
 
-  
-  .features,
-  .rates,
-  .steps,
-  .pluses {
-    padding: 300px 10vw;
-  }
 
 
 
@@ -67,6 +57,23 @@
 
   .teachers__title {padding-top: 200px;}
 
+
+
+
+
+
+  .levels {
+    padding-top: 400px;
+  }
+
+
+  .features,
+  .rates,
+  .steps,
+  .pluses {
+    padding: 300px 10vw;
+  }
+
 }
 
 
@@ -82,7 +89,7 @@
 @media (min-width: 1600px) and (max-width: 1920px) {
 
 
-  .header {
+  .header, .header2 {
     height: 100px;
   }
 
@@ -99,6 +106,19 @@
     right: 0;
     left: auto;
     bottom: 150px;
+  }
+
+
+  .levels {
+    padding-top: 400px;
+  }
+
+
+  .features,
+  .rates,
+  .steps,
+  .pluses {
+    padding: 300px 10vw;
   }
 
 
