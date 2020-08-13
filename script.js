@@ -196,5 +196,5 @@ ScrollOut({
 
 ScrollOut({
   targets: ".card_animate",
-  threshold: 0.5
+  threshold: 0.2
 });

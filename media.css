@@ -30,7 +30,11 @@
   .our_pluses__title {padding-top: 200px; padding-bottom: 30px; height: auto;}
   .our_pluses__content__title {max-width: 70%}
 
+  .levels {
+    padding-top: 400px;
+  }
 
+  
   .features,
   .rates,
   .steps,
