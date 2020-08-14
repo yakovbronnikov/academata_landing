@@ -1095,6 +1095,7 @@
 
 
   .header,
+  .header2,
   .main_banner,
   .levels,
   .features,
@@ -1109,28 +1110,51 @@
     padding-left: 20px;
   }
 
-  .header2 {padding-right: 20px; padding-left: 0;}
+  .header2 .blue_button {height: 40px; padding: 20px 32px;}
 
 
 
   .levels {
     grid-template-columns: 1fr;
     grid-row-gap: 50px;
+    padding: 150px 20px 0;
   }
 
-  .levels h1 {grid-column: 1/2}
+  .levels h1 {grid-column: 1/2;}
+
+  .levels__card {display: grid;}
+  .levels__card img {position: static; width: 70px; grid-row: 3/4;}
+  .levels__card p {width: auto; margin: 20px 0;}
 
 
 
-  .features {grid-template-columns: 1fr; grid-row-gap: 70px; grid-column-gap: 50px;}
+
+
+  .features {
+    grid-template-columns: 1fr;
+    grid-row-gap: 70px;
+    grid-column-gap: 50px;
+    padding-bottom: 0;
+  }
+
   .features h1 {grid-column: 1/2; padding-bottom: 0;}
   .features__card h4 {margin: 20px 0 10px;}
 
+  .features .features__card:nth-child(3),
+  .features .features__card:nth-child(5),
+  .features .features__card:nth-child(4){
+    transition: .6s;
+  }
 
-  .rates {grid-template-columns: 1fr; grid-row-gap: 30px;}
+
+
+
+  .rates {grid-template-columns: 1fr; grid-row-gap: 30px; padding-bottom: 0;}
   .rates h1, .rates h4 {grid-column: 1/2;}
   .rates h4  {margin: 0; margin-bottom: 30px;}
   .rates__card {border-left: 4px solid #0066E0; margin-bottom: 0;}
+  .rates__arrow, .rates__img {position: static;}
+  .rates__img {width: 60px;}
 
   .steps h4 {margin: 30px 0 60px;}
   .steps__cards {grid-template-columns: 1fr; grid-row-gap: 50px;}
