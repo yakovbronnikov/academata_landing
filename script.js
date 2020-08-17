@@ -9,11 +9,6 @@ window.onscroll = function () {
 
 
 
-setTimeout(() => {
-  window.scrollTo(0, 0);
-}, 0);
-
-
 
 function onChangeForm({ name, value }) {
   const inputs = document.querySelectorAll(".form_input__field");
@@ -48,82 +43,13 @@ function onChangeForm({ name, value }) {
 
 function scrollFunction()  {
 
-  const processTitle = document.querySelector('.process_steps__title');
-  const processSubtitle = document.querySelector('.process_steps__title h1');
-  const processDescription = document.querySelector('.process_steps__title h4');
-  const processCoords = processTitle.getBoundingClientRect().top;
-
-  const plusesTitle = document.querySelector('.our_pluses__title');
-
-  const beginningCoords = document.querySelector('.beginning').getBoundingClientRect().top;
-
-  const techersTitle = document.querySelector('.teachers__title');
-
-  const helpForm = document.querySelector('.help_form').getBoundingClientRect().top;
-
-  let boxes = document.querySelectorAll('#box1, #box2, #box3, #box4, #box5, #box6');
-
-
-  if (processCoords <= 0) {
-    plusesTitle.style.position = 'static';
-  } else {
-    plusesTitle.style.position = 'sticky';
-  }
-
-
-  if (beginningCoords <= 0) {
-    processTitle.style.position = 'static';
-  } else {
-    processTitle.style.position = 'sticky';
-  }
-
-  // if (helpForm <= 0) {
-  //   techersTitle.style.position = 'static';
-  // } else {
-  //   techersTitle.style.position = 'sticky';
-  // }
-
-
-
-  const promptWindow = document.querySelector('.scroll_prompt__window');
-
-  const nextImg = document.querySelector('.next img');
-  const prev = document.querySelector('.previous');
+  const levels = document.querySelector('.levels').getBoundingClientRect().top;
   const up = document.querySelector('.scroll_up__button');
 
-  if (document.documentElement.scrollTop > 0){
-    promptWindow.classList.remove('scroll_prompt__window__banner');
-    nextImg.style.display = 'none';
-    prev.style.display = 'block';
-    up.style.display = 'block';
+  if (levels < 0){
+    up.style.transform = 'scale(1)';
   } else {
-    promptWindow.classList.add('scroll_prompt__window__banner');
-    nextImg.style.display = 'block';
-    prev.style.display = 'none';
-    up.style.display = 'none';
-  }
-
-  const processScreen = document.querySelector('#box14').getBoundingClientRect().top;
-
-  if (processScreen <= 0) {
-    processSubtitle.style.opacity = 0.2;
-    processDescription.style.opacity = 0.2;
-  } else if(processCoords <= 0){
-    processSubtitle.style.opacity = 1;
-    processDescription.style.opacity = 1;
-  }
-
-  const teachersTitle = document.querySelector('.teachers__title');
-  const teachersSubtitle = document.querySelector('.teachers__title h1');
-  const teachersDescription = document.querySelector('.teachers__title h3');
-  const teachersCard = document.querySelector('#box22').getBoundingClientRect().top;
-
-  if (teachersCard <= 0) {
-    teachersSubtitle.style.opacity = 0.2;
-    teachersDescription.style.opacity = 0.2;
-  } else if(teachersCard <= 0){
-    teachersSubtitle.style.opacity = 1;
-    teachersDescription.style.opacity = 1;
+    up.style.transform = 'scale(0)';
   }
 
 
