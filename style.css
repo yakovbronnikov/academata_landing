@@ -31,6 +31,7 @@ h5 {font-size: 20px;}
   opacity: .3;
   transition: .4s;
   box-shadow: 0 0 30px rgba(0,117,224,.4);
+  transform: scale(0);
 }
 
 .scroll_up__button:hover {opacity: 1;}
@@ -825,6 +826,16 @@ h5 {font-size: 20px;}
 
 
 .pluses .pluses__card:nth-child(3) {
+  justify-self: center;
+}
+
+.pluses .pluses__card:nth-child(4) {
+  justify-self: end;
+}
+
+
+
+.pluses .pluses__card:nth-child(3) {
   transition: .6s .2s;
 }
 
@@ -938,8 +949,7 @@ h5 {font-size: 20px;}
 
 .reviews {
   width: 100vw;
-  height: 100vh;
-  padding: 15vh 0 20vh;
+  padding: 200px 0 20vh;
   overflow: hidden;
 }
 
