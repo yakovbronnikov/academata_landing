@@ -791,7 +791,13 @@
 
 
 
+  .slick-slide {
+    transform: translateY(20px);
+  }
 
+  .slick-center {
+    transform: translateY(0);
+  }
 
 
 
