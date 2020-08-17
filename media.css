@@ -367,6 +367,22 @@
   }
 
 
+  .pay_form__buttons .blue_button,
+  .free_form__buttons .blue_button,
+  .pay_form__buttons label,
+  .free_form__buttons label {
+    width: 100%;
+  }
+
+  .pay_form__buttons .blue_button,
+  .free_form__buttons label {
+    margin-right: 10px;
+  }
+
+  .free_form__buttons .blue_button,
+  .pay_form__buttons label {
+    margin-left: 10px;
+  }
 
 
 
