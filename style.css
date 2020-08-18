@@ -629,27 +629,27 @@ h5 {font-size: 20px;}
 }
 
 .rates__card p:nth-child(3) svg {
-  transition: .6s .6s;
+  transition: .6s .2s;
 }
 
 .rates__card p:nth-child(4) svg {
-  transition: .6s .8s;
+  transition: .6s .4s;
 }
 
 .rates__card p:nth-child(5) svg {
-  transition: .6s 1s;
+  transition: .6s .6s;
 }
 
 .rates .rates__card:nth-child(4) p:nth-child(3) svg {
-  transition: .6s 1.2s;
+  transition: .6s .8s;
 }
 
 .rates .rates__card:nth-child(4) p:nth-child(4) svg {
-  transition: .6s 1.4s;
+  transition: .6s 1s;
 }
 
 .rates .rates__card:nth-child(4) p:nth-child(5) svg {
-  transition: .6s 1.6s;
+  transition: .6s 1.2s;
 }
 
 
