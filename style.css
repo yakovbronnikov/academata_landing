@@ -484,6 +484,7 @@ h5 {font-size: 20px;}
   opacity: 1;
   box-shadow: 0 2px 10px rgba(0,0,0,.07);
   transition: .8s;
+  overflow: hidden;
 }
 
 .levels__card p {
@@ -496,6 +497,11 @@ h5 {font-size: 20px;}
   position: absolute;
   right: 30px;
   top: 30px;
+}
+
+.levels__card img {
+  width: 28%;
+  opacity: .1;
 }
 
 
