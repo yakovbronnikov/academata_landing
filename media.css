@@ -649,7 +649,7 @@
   .banner__img__1, .banner__img__2 {
     align-items: center;
     height: auto;
-    bottom: 14vw;
+    top: 44vw;
   }
 
   .banner__img__1 img, .banner__img__2 img {
