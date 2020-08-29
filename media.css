@@ -644,8 +644,7 @@
   }
 
   .banner__img__1 img, .banner__img__2 img {
-    width: auto;
-    height: 60vh;
+    width: 260vw;
   }
 
   .banner__img__3 {
