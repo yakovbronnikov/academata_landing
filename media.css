@@ -629,10 +629,17 @@
 
 
 
+
+  .banner__title {
+    margin-top: 32vw;
+    padding: 0 20px;
+  }
+
+
   .banner .blue_button {
     display: block;
     position: absolute;
-    bottom: 20px;
+    bottom: 20vw;
     left: 20px;
     right: 20px;
     width: auto;
@@ -640,7 +647,9 @@
   }
 
   .banner__img__1, .banner__img__2 {
-    align-items: flex-end;
+    align-items: center;
+    height: auto;
+    bottom: 14vw;
   }
 
   .banner__img__1 img, .banner__img__2 img {
@@ -653,7 +662,7 @@
   }
 
   .banner__img__4 {
-    bottom: 20vh;
+    bottom: 40vw;
   }
 
 

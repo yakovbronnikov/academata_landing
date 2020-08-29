@@ -381,6 +381,8 @@ h5 {font-size: 20px;}
 .banner__title {
   color: #fff;
   margin: 24vh 0 60px;
+  position: relative;
+  z-index: 10;
 }
 
 
@@ -391,6 +393,8 @@ h5 {font-size: 20px;}
   color: #fff;
   transition: none;
   display: none;
+  position: relative;
+  z-index: 10;
 }
 
 
