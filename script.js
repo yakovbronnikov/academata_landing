@@ -8,6 +8,8 @@ window.onscroll = function () {
 };
 
 
+let rellax = new Rellax('.rellax');
+
 
 
 function onChangeForm({ name, value }) {
@@ -53,6 +55,30 @@ function scrollFunction()  {
   }
 
 
+
+
+  const bannerTitle = document.querySelector('.banner__title');
+  const bannerImg1 = document.querySelector('.banner__img__1');
+  const bannerImg2 = document.querySelector('.banner__img__2');
+  const bannerImg3 = document.querySelector('.banner__img__3');
+  const bannerImg4 = document.querySelector('.banner__img__4');
+  const bannerButton = document.querySelector('.banner .blue_button');
+  let scroll = document.documentElement.scrollTop;
+  const clentWidth = document.documentElement.clientWidth;
+
+
+  bannerTitle.style.opacity = `${1-scroll*0.002}`;
+  bannerImg1.style.opacity = `${1-scroll*0.005}`;
+  bannerButton.style.opacity = `${1-scroll*0.007}`;
+  bannerImg2.style.opacity = `${scroll*0.005}`;
+  bannerImg3.style.opacity = `${scroll*0.005}`;
+  bannerImg4.style.opacity = `${scroll*0.005}`;
+
+  if (clentWidth < 768) {
+    bannerTitle.style.opacity = `${1-scroll*0.005}`;
+    bannerImg1.style.opacity = `${1-scroll*0.007}`;
+    bannerImg2.style.opacity = `${scroll*0.01}`;
+  }
 }
 
 

@@ -364,6 +364,82 @@ h5 {font-size: 20px;}
 /* Main banner styles and CSS animations */
 
 
+.banner{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(284.41deg, #147FFF 0%, #003C83 100%);
+  overflow: hidden;
+  z-index: 90;
+  padding: 0 10vw;
+}
+
+.banner__title {
+  color: #fff;
+  margin: 24vh 0 60px;
+}
+
+
+.banner .blue_button {
+  background: none;
+  border: 2px solid #fff;
+  width: 300px;
+  color: #fff;
+  transition: none;
+  display: none;
+}
+
+
+.banner__img__1, .banner__img__2, .banner__img__4 {
+  width: 100vw;
+  position: absolute;
+  left: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__img__1, .banner__img__2 {
+  height: 40vh;
+}
+
+.banner__img__1 img, .banner__img__2 img {
+  width: 100vw;
+}
+
+.banner__img__4 {
+  opacity: 0;
+}
+
+.banner__img__4 img {
+  width: 100%;
+}
+
+.banner__img__2 {
+  opacity: 0;
+}
+
+
+.banner__img__3 {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
 
 .main_banner {
   position: relative;

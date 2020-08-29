@@ -115,7 +115,24 @@
 
 
 
-  <div class="main_banner" id="box1">
+  <div class="banner">
+    <h1 class="banner__title rellax" data-rellax-speed="-5">Хочешь стать известым<br>блогером и журналистом?</h1>
+    <label for="pay_form" class="blue_button">Начать обучение</label>
+    <div class="banner__img">
+      <div class="banner__img__1 rellax" data-rellax-speed="2"><img src="img/banner__img1.svg"></div>
+      <div class="banner__img__2 rellax" data-rellax-speed="2"><img src="img/banner__img2.svg"></div>
+      <img src="img/banner__img3.svg" class="banner__img__3 rellax" data-rellax-speed="-10"></img>
+      <picture class="banner__img__4 rellax" data-rellax-speed="-4">
+        <source srcset="img/banner__img4.svg" media="(min-width: 1200px)">
+        <img src="img/banner__img4__min.svg"></img>
+      </picture>
+      <!-- <img src="img/banner__img4.svg" class="banner__img__4 rellax" data-rellax-speed="-4"></img> -->
+    </div>
+  </div>
+
+
+
+  <!-- <div class="main_banner" id="box1">
     <div class="main_banner__title">
       <h1>Хочешь стать</h1>
       <h1>известным блогером</h1>
@@ -123,7 +140,7 @@
     </div>
     <label for="pay_form" class="blue_button">Начать обучение</label>
     <img src="img/main_banner_img.svg" alt="" class="main_banner__img">
-  </div>
+  </div> -->
 
 
 
@@ -475,6 +492,7 @@
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script src="rellax.min.js"></script>
   <script src="script.js"></script>
   <script type="text/javascript">
     $('.center') .slick({

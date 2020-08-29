@@ -41,6 +41,10 @@
   .teachers__title {padding-top: 200px;}
 
 
+  .beginning__title h3{
+    max-width: 1400px;
+  }
+
 
 
 
@@ -225,6 +229,10 @@
   .teachers__card {padding-top: 80px; padding-bottom: 80px;}
   .teachers__card__end {padding-bottom: 200px;}
 
+  .beginning__title h3{
+    max-width: 600px;
+  }
+
 }
 
 
@@ -271,6 +279,30 @@
 
 
 
+
+  .banner .blue_button {
+    display: block;
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .banner__img__1, .banner__img__2 {
+    align-items: flex-end;
+  }
+
+  .banner__img__1 img, .banner__img__2 img {
+    width: auto;
+  }
+
+  .banner__img__3 {
+    height: 100vh;
+    width: auto;
+  }
+
+
+
+
+
   .main_banner__img {
     height: 40vh;
     right: 0;
@@ -294,6 +326,12 @@
 
   .beginning {
     grid-template-columns: 1fr;
+    background-position: center;
+    padding: 10vh 10vw;
+  }
+
+  .beginning__title {
+    max-width: 540px
   }
 
   .beginning .blue_button {
@@ -450,6 +488,11 @@
 @media (min-width: 960px) and (max-width: 1024px) {
   h1 {font-size: 60px;}
   .levels__card {padding-bottom: 100px;}
+
+  .banner .blue_button {
+    position: relative;
+    margin-top: 80px;
+  }
 }
 
 
@@ -581,6 +624,40 @@
   .header__logo {
     height: 30px;
   }
+
+
+
+
+
+  .banner .blue_button {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    padding: 16px 50px;
+  }
+
+  .banner__img__1, .banner__img__2 {
+    align-items: flex-end;
+  }
+
+  .banner__img__1 img, .banner__img__2 img {
+    width: auto;
+    height: 60vh;
+  }
+
+  .banner__img__3 {
+    height: 100vh;
+    width: auto;
+  }
+
+  .banner__img__4 {
+    bottom: 20vh;
+  }
+
+
 
 
 
