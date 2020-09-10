@@ -544,7 +544,7 @@
     height: 100%;
     background: #fff;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: .4s;
   }
 
