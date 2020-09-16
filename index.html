@@ -29,7 +29,7 @@
 </head>
 <body>
 
-  <a href="#box1"class="scroll_up__button"></a>
+  <a href="#banner"class="scroll_up__button"></a>
 
 
   <input type="radio" name="forms" id="pay_form_close">
@@ -95,9 +95,9 @@
   </div>
 
   <div class="drawer__nav">
-    <a href="#levels">Для кого</a>
-    <a href="#reviews">Отзывы</a>
-    <a href="#teachers">Преподаватели</a>
+    <a href="#levels" onclick="drawerClose()">Для кого</a>
+    <a href="#reviews" onclick="drawerClose()">Отзывы</a>
+    <a href="#teachers" onclick="drawerClose()">Преподаватели</a>
     <div class="drawer__nav__bg">
       <div></div>
     </div>
@@ -108,8 +108,8 @@
     <label for="drawer" class="drawer_label"><div class="drawer_button"></div></label>
     <div class="header__nav">
       <a href="#levels">Для кого</a>
-      <a href="#box19">Отзывы</a>
-      <a href="#box21">Преподаватели</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#teachers">Преподаватели</a>
     </div>
     <label for="pay_form" class="blue_button" onclick="ym(67200109,'reachGoal','pay_form'); return true;" value="Начать обучение">Начать обучение</label>
   </header>
@@ -119,15 +119,15 @@
     <label for="drawer" class="drawer_label"><div class="drawer_button"></div></label>
     <div class="header__nav">
       <a href="#levels">Для кого</a>
-      <a href="#box19">Отзывы</a>
-      <a href="#box21">Преподаватели</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#teachers">Преподаватели</a>
     </div>
     <label for="pay_form" class="blue_button" onclick="ym(67200109,'reachGoal','pay_form'); return true;" value="Начать обучение">Начать обучение</label>
   </header>
 
 
 
-  <div class="banner">
+  <div class="banner" id="banner">
     <h1 class="banner__title rellax" data-rellax-speed="-5">Хочешь стать известым<br>блогером и журналистом?</h1>
     <label for="pay_form" class="blue_button">Начать обучение</label>
     <div class="banner__img">
@@ -141,19 +141,6 @@
       <!-- <img src="img/banner__img4.svg" class="banner__img__4 rellax" data-rellax-speed="-4"></img> -->
     </div>
   </div>
-
-
-
-  <!-- <div class="main_banner" id="box1">
-    <div class="main_banner__title">
-      <h1>Хочешь стать</h1>
-      <h1>известным блогером</h1>
-      <h1>и журналистом?</h1>
-    </div>
-    <label for="pay_form" class="blue_button">Начать обучение</label>
-    <img src="img/main_banner_img.svg" alt="" class="main_banner__img">
-  </div> -->
-
 
 
 
@@ -285,7 +272,7 @@
 
 
 
-  <div class="beginning" id="box18">
+  <div class="beginning">
     <div class="beginning__title">
       <h1 class="title_animate">Так начинается Ваш путь</h1>
       <h3 class="title_animate">к приобретению многомиллионной армии читателей и подписчиков</h3>
@@ -322,7 +309,7 @@
 
 
 
-  <div class="reviews" id="box19">
+  <div class="reviews" id="reviews">
     <h1 class="title_animate">Отзывы учеников</h1>
     <div class="reviews_slider center slider slick">
       <div class="reviews_slider__card">
@@ -399,7 +386,7 @@
   </div>
 
 
-  <div class="travel" id="box20">
+  <div class="travel">
     <div class="travel__title">
       <h1 class="title_animate">Совместное путешествие</h1>
       <h3 class="title_animate">для лучших студентов и сотрудников</h3>
@@ -421,13 +408,13 @@
 
 
 
-  <div class="teachers__title" id="box21">
+  <div class="teachers__title" id="teachers">
     <h1 class="title_animate">Наши преподаватели</h1>
     <h3 class="title_animate">Это журналисты с многолетним опытом работы в федеральных СМИ</h3>
   </div>
 
 
-  <div class="teachers__card" id="box22">
+  <div class="teachers__card">
         <div class="teachers__avatar"></div>
         <div class="teachers__info">
           <div>
@@ -439,7 +426,7 @@
         </div>
         <p class="teachers__txt txt_animate">Семантическое ядро - это смысловая составляющая текста. Отвечает за связь текста с реальностью, отражает правильность подбора и расстановки слов для описания события. Семантическое ядро формирует у читателя впечатление о новости. Я помогу Вам освоить этот и многие другие ньюансы в написании отличных, читаемых статей. </p>
       </div>
-  <div class="teachers__card" id="box23">
+  <div class="teachers__card">
         <div class="teachers__avatar teachers__avatar2"></div>
         <div class="teachers__info">
           <div>
@@ -451,7 +438,7 @@
         </div>
         <p class="teachers__txt txt_animate">Журналистика — это не просто новости. Журналисты помогают продвигать позитивные социальные изменения. Если посредством статей вы хотите менять жизнь людей в лучшую сторону, то вы попали по адресу. Я расскажу Вам материал на примере выдающихся работ о социальных проблемах.</p>
       </div>
-  <div class="teachers__card" id="box24">
+  <div class="teachers__card">
         <div class="teachers__avatar teachers__avatar3"></div>
         <div class="teachers__info">
           <div>
@@ -463,7 +450,7 @@
         </div>
         <p class="teachers__txt txt_animate">Я верю, что редактор — это не просто создатель текста за деньги. Он специалист широкого профиля, который умеет делать информационные продукты. Ему под силу написать статью, проверить работу начинающих коллег, поправить пару слов прямо перед публикацией и создать простую иллюстрацию.</p>
       </div>
-  <div class="teachers__card teachers__card__end" id="box25">
+  <div class="teachers__card teachers__card__end">
         <div class="teachers__avatar teachers__avatar4"></div>
         <div class="teachers__info">
           <div>
@@ -476,7 +463,7 @@
         <p class="teachers__txt txt_animate">Покажу и докажу, что редактор может управлять реальностью, как никто другой. Объясню, почему редактор должен уметь делать всё (и как этому научиться). Выдам лайфхаки, инсайты и другие заимствованные слова. И, конечно же, поделюсь своими ошибками, чтобы сэкономить время вам.</p>
       </div>
 
-  <div class="help_form" id="box26">
+  <div class="help_form">
     <div class="help_form__title">
       <h1 class="title_animate">Остались вопросы?</h1>
       <h3 class="title_animate">Мы с радостью ответим!</h3>

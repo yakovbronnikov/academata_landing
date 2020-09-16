@@ -83,6 +83,19 @@ function scrollFunction()  {
 
 
 
+const drawer = document.querySelector('#drawer');
+// const drawerNav = document.querySelectorAll('.drawer__nav a');
+//
+// drawerNav.forEach((nav) =>{
+//   nav.addEventLitener
+// });
+
+function drawerClose(){
+  drawer.checked = false;
+}
+
+
+
 
 
 
