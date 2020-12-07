@@ -581,7 +581,7 @@ h5 {font-size: 20px;}
 
 .levels__card img {
   width: 28%;
-  opacity: .1;
+  opacity: .2;
 }
 
 
@@ -621,7 +621,7 @@ h5 {font-size: 20px;}
 }
 
 .features__card__img img {
-  width: 80px;
+  width: 100px;
 }
 
 
@@ -849,6 +849,8 @@ h5 {font-size: 20px;}
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
+
+
 
 
 .steps__points__item {
